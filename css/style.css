@@ -2,6 +2,69 @@ body {
     background-color: #9b9797
 }
 
+
+/* Heading */
+
+.heading {
+    text-align: center;
+    color: #fff;
+}
+
+.description {
+    text-align: center;
+}
+
+
+/* .navigation {
+    background-color: #AD0075;
+    position: relative;
+}
+
+.site-navigation {
+    width: 50%;
+    list-style: none;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: static;
+    float: none;
+} */
+
+
+/* Hide links on small screens below 600px
+@media only screen and (max-width: 600px) {
+    .site-navigation  {
+        display: none;
+    }
+} */
+
+
+/* @media screen and (max-width: 600px) {
+    .navigation.is-responsive {
+        position: relative;
+    }
+    .navigation.is-responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navigation.is-responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+} */
+
+
+/* NOTICE */
+
+.notice {
+    text-align: center
+}
+
 .sectionHome {
     background-color: #fe7;
 }
