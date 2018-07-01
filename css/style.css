@@ -33,36 +33,29 @@ body {
 } */
 
 
-/* Hide links on small screens below 600px
-@media only screen and (max-width: 600px) {
-    .site-navigation  {
-        display: none;
-    }
-} */
+/* Media Queries */
 
 
-/* @media screen and (max-width: 600px) {
-    .navigation.is-responsive {
-        position: relative;
-    }
-    .navigation.is-responsive a.icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .navigation.is-responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
+/* Resize image on screens below 650px */
 
-} */
+@media only screen and (max-width: 650px) {
+    .img-thumbnail {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .img-thumbnail {
+        width: 80%;
+    }
+}
 
 
 /* NOTICE */
 
 .notice {
-    text-align: center
+    text-align: center;
+    align-content: center;
 }
 
 .sectionHome {
