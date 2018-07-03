@@ -6,6 +6,7 @@ body {
 /* Heading */
 
 .heading {
+    margin-top: 2em;
     text-align: center;
     color: #fff;
 }
@@ -15,12 +16,7 @@ body {
 }
 
 
-/* .navigation {
-    background-color: #AD0075;
-    position: relative;
-}
-
-.site-navigation {
+/* .site-navigation {
     width: 50%;
     list-style: none;
     justify-content: space-between;
@@ -74,10 +70,6 @@ ul.nav {
     margin: auto;
     padding-top: 8em;
 }
-
-/* .container-fluid {
-    background-color: #AD0075;
-} */
 
 .footerAbove {
     background-color: #9b9797;
@@ -146,3 +138,5 @@ div#contactMe {
     margin: auto;
     width: 60%;
 }
+
+`
