@@ -13,6 +13,9 @@ body {
 
 .description {
     text-align: center;
+    width: 85%;
+    margin: auto;
+    padding-top: 1em;
 }
 
 
@@ -102,11 +105,11 @@ hr.menuSeparator {
     width: 80%;
 }
 
-hr.titleSeparatorOne {
+.titleSeparatorOne {
     color: #fff;
-    margin: 40px auto 30px;
+    margin: 40px auto;
     border-top: solid 5px;
-    width: 80%;
+    width: 90%;
 }
 
 hr.titleSeparatorTwo {

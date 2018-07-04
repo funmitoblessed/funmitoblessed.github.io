@@ -14,8 +14,9 @@
     <title>Funmito Blessed - Welcome to my Page</title>
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="0">
 
+    <!-- Navigation -->
     <nav class="nav navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -28,23 +29,36 @@
             </div>
             <div class="collapse navbar-collapse" id="responsiveNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#">HOME</a></li>
-                    <li><a href="#">PORTFOLIO</a></li>
-                    <li><a href="#">CONTACT</a></li>
+                    <li class="active"><a href="#home">HOME</a></li>
+                    <li><a href="#skills">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Header -->
-
+    <!-- Page header -->
     <h1 class="heading">Oluwafunmito Blessed</h1>
-    <p class="description">Educator. Youth Development Professional. Tech Enthusiast.</p>
+    <!-- Description Section -->
+    <section id="home" class="description">
+        <div class="row">
+            <div class="col-xs-8">
+                <h3 class="text-center description">Educator. Youth Development Professional. Tech Enthusiast.</h3>
+                <hr class="titleSeparatorOne">
+                <span class="text-center">Dedicated professional with over 5 years of experience in Information Technology. Specialties in IT technical support and consultancy, systems administration and management, and data analysis and management. Enjoys solving
+            problems using technology, supporting the people who use it, and training them to understand how it works and how they can better leverage on technological tools to improve their day-to-day living.</span>
+            </div>
+            <div class="col-xs-4">
+                <figure><img src="./img/me.jpg" class="img-circle img-responsive" alt="Funmito's Picture"></figure>
+                <!-- <div class="caption text-center" style="padding-top: 1em">Oluwafunmito Blessed</div> -->
+            </div>
+        </div>
+    </section>
 
     <section class="notice col-xs-12">
         <span><h1>Wait a minute...</h1></span>
         <span class="work-notice"><h3>Some work is going on under the hood...</h3></span>
-        <span><p>Check out this <a href="./pixel-art-maker/index.html">Pixel Art Maker</a>and have some fun drawing stuff like this.</p></span>
+        <span><p>Check out this <a href="./pixel-art-maker/index.html" target="_blank">Pixel Art Maker</a>and have some fun drawing stuff like this.</p></span>
         <figure><img src="./img/pixel-art.png" class="img-thumbnail img-responsive" alt="Pixel Art Picture"></figure>
     </section>
 
