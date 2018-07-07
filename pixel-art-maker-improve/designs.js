@@ -35,6 +35,13 @@ $(function () {
             }
         }
 
+        // event listener for cell clicking
+        $('td').click(function () {
+            // select colour input
+            const selectedColor = $('#colorPicker').val();
+            $(this).css('background-color', selectedColor);
+        });
+
         // this event listeners will clear canvas on change in input values
         $('#inputHeight').on('change', function () {
             $('#pixelCanvas').html('');
@@ -42,19 +49,28 @@ $(function () {
         $('#inputWeight').on('change', function () {
             $('#pixelCanvas').html('');
         })
+        $('#colorPicker').on('change', function () {
+            colorAdder();
+        })
 
-        // event listener for cell clicking
-        $('td').click(function () {
-            // select colour input
-            const selectedColor = $('#colorPicker').val();
-            $(this).css('background-color', selectedColor);
-        });
+
+        // to be called after erasing
+        function colorAdder() {
+            $('td').click(function () {
+                // select colour input
+                const selectedColor = $('#colorPicker').val();
+                $(this).css('background-color', selectedColor);
+            });
+        }
+
     };
 
 
     $('#input').on('click', function (event) {
-        makeGrid()
+        makeGrid();
         event.preventDefault();
+        // colorAdder();
+
     });
 
     function cellCleaner() {
@@ -69,6 +85,10 @@ $(function () {
     let eraseCell = $('#eraser')
     eraseCell.click(function (event) {
         event.preventDefault();
-        cellCleaner()
+        cellCleaner();
     });
+
+
+
+    // TODO: Add an onchange function to the color picker.
 });
