@@ -1,61 +1,74 @@
-$(function() {
-    // Select color input
-    // Select size input
-    // When size is submitted by the user, call makeGrid()
-    // Your code goes here!
+$(function () {
     // Get table element and store as variable
     const table = document.getElementById('pixelCanvas');
 
     function makeGrid() {
         // Event Listener for submit
-        $('form').on('submit', function(event) {
-            
-            // Clear canvas first on submit
-            $('#pixelCanvas').html('');
 
-            // select size input
-            const gridHeight = $('#inputHeight').val();
-            const gridWidth = $('#inputWeight').val();
+        // Clear canvas first on submit
+        $('#pixelCanvas').html('');
 
-            // create table body
-            const tableBody = document.createElement('TBODY');
+        // select size input
+        const gridHeight = $('#inputHeight').val();
+        const gridWidth = $('#inputWeight').val();
 
-            // append table body to table element
-            table.appendChild(tableBody);
+        // create table body
+        const tableBody = document.createElement('TBODY');
 
-            // for loop creates cells from variables inputHeight and inputWeight
-            for (let row = 0; row < gridHeight; row++) {
+        // append table body to table element
+        table.appendChild(tableBody);
 
-                // create table rows
-                const tableRow = document.createElement('TR');
+        // for loop creates cells from variables inputHeight and inputWeight
+        for (let row = 0; row < gridHeight; row++) {
 
-                // append rows to table body
-                tableBody.appendChild(tableRow);
+            // create table rows
+            const tableRow = document.createElement('TR');
 
-                // create table cells
-                for (let col = 0; col < gridWidth; col++) {
-                    const tableData = document.createElement('TD');
-                    // append table cells to row
-                    tableRow.appendChild(tableData);
-                }
+            // append rows to table body
+            tableBody.appendChild(tableRow);
+
+            // create table cells
+            for (let col = 0; col < gridWidth; col++) {
+                const tableData = document.createElement('TD');
+                // append table cells to row
+                tableRow.appendChild(tableData);
             }
+        }
 
-            // this event listeners will clear canvas on change in input values
-            $('#inputHeight').on('change', function() {
-                $('#pixelCanvas').html('');
-            })
-            $('#inputWeight').on('change', function() {
-                $('#pixelCanvas').html('');
-            })
+        // this event listeners will clear canvas on change in input values
+        $('#inputHeight').on('change', function () {
+            $('#pixelCanvas').html('');
+        })
+        $('#inputWeight').on('change', function () {
+            $('#pixelCanvas').html('');
+        })
 
-            // event listener for cell clicking
-            $('td').click(function() {
-                // select colour input
-                const selectedColor = $('#colorPicker').val();
-                $(this).css('background-color', selectedColor);
-            });
-            event.preventDefault();
+        // event listener for cell clicking
+        $('td').click(function () {
+            // select colour input
+            const selectedColor = $('#colorPicker').val();
+            $(this).css('background-color', selectedColor);
         });
     };
-    makeGrid()
+
+
+    $('#input').on('click', function (event) {
+        makeGrid()
+        event.preventDefault();
+    });
+
+    function cellCleaner() {
+        let backgroundColor = $('body').css('background-color');
+        let canvas = $('#pixelCanvas');
+        let targetCell = canvas.find('td');
+        targetCell.click(function () {
+            $(this).css('background-color', backgroundColor);
+        })
+    }
+
+    let eraseCell = $('#eraser')
+    eraseCell.click(function (event) {
+        event.preventDefault();
+        cellCleaner()
+    });
 });
