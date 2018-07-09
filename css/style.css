@@ -11,11 +11,18 @@ body {
     color: #fff;
 }
 
+
+/* HOME */
+
 .description {
     text-align: center;
     width: 85%;
     margin: auto;
     padding-top: 1em;
+}
+
+.my-details {
+    margin-top: 5%;
 }
 
 
@@ -30,24 +37,6 @@ body {
     position: static;
     float: none;
 } */
-
-
-/* Media Queries */
-
-
-/* Resize image on screens below 650px */
-
-@media only screen and (max-width: 650px) {
-    .img-thumbnail {
-        width: 80%;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    .img-thumbnail {
-        width: 80%;
-    }
-}
 
 
 /* NOTICE */
@@ -88,56 +77,67 @@ ul.nav {
 }
 
 .footerBelow {
-    background-color: #AD0075;
+    background-color: #9b9797;
     color: #fff;
     padding-bottom: 2%;
     padding-top: 9%;
 }
 
-.jumbotron {
+
+/* .jumbotron {
     margin: auto;
     width: 80%;
     background-color: rgb(223, 219, 219);
     color: rgb(99, 96, 96);
-}
+} */
 
-hr.menuSeparator {
+.menuSeparator {
     width: 80%;
 }
 
-.titleSeparatorOne {
+.title-separator-one {
     color: #fff;
-    margin: 40px auto;
+    margin: 20px;
     border-top: solid 5px;
     width: 90%;
 }
 
-hr.titleSeparatorTwo {
+.titleSeparatorTwo {
     color: rgb(99, 96, 96);
     margin: 40px auto 30px;
     border-top: solid 5px;
     width: 50%;
 }
 
-hr.titleSeparatorThree {
+.titleSeparatorThree {
     color: rgb(99, 96, 96);
     margin: 40px auto 30px;
     border-top: solid 5px;
     width: 50%;
 }
 
-div.portfolio {
-    margin-left: 6.5%;
-    width: 40%;
-    padding-bottom: .5em;
+
+/* Media Queries */
+
+
+/* Resize on smaller screen sizes */
+
+@media only screen and (max-width: 600px) {
+    .img-thumbnail {
+        width: 80%;
+    }
+    .my-image {
+        margin-top: 30%;
+    }
+    .description {
+        text-align: center;
+        width: 85%;
+        padding-top: 1px;
+    }
 }
 
-div.portfolioParent {
-    margin: auto;
-    width: 100%;
-}
-
-div#contactMe {
-    margin: auto;
-    width: 60%;
+@media only screen and (max-width: 1024px) {
+    .img-thumbnail {
+        width: 80%;
+    }
 }
