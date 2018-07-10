@@ -16,7 +16,6 @@ body {
 
 .description {
     text-align: center;
-    width: 85%;
     margin: auto;
     padding-top: 1em;
 }
@@ -46,7 +45,7 @@ body {
     align-content: center;
 }
 
-.sectionHome {
+.section-home {
     background-color: #fe7;
 }
 
@@ -58,12 +57,7 @@ ul.nav {
     transition: all .2s;
 }
 
-#top {
-    margin: auto;
-    padding-top: 8em;
-}
-
-.footerAbove {
+.footer-above {
     background-color: #9b9797;
     padding-top: 1em;
     color: #fff;
@@ -71,27 +65,26 @@ ul.nav {
     font-size: 1em;
 }
 
-.socialMedia {
+.social-media {
     margin-block-start: 1em;
-    padding-bottom: 1em;
+    padding-bottom: .5em;
 }
 
-.footerBelow {
+.footer-below {
     background-color: #9b9797;
     color: #fff;
     padding-bottom: 2%;
     padding-top: 9%;
 }
 
-
-/* .jumbotron {
+.jumbotron {
     margin: auto;
-    width: 80%;
+    width: 90%;
     background-color: rgb(223, 219, 219);
     color: rgb(99, 96, 96);
-} */
+}
 
-.menuSeparator {
+.menu-separator {
     width: 80%;
 }
 
@@ -102,14 +95,14 @@ ul.nav {
     width: 90%;
 }
 
-.titleSeparatorTwo {
+.title-separator-two {
     color: rgb(99, 96, 96);
     margin: 40px auto 30px;
     border-top: solid 5px;
     width: 50%;
 }
 
-.titleSeparatorThree {
+.title-separator-three {
     color: rgb(99, 96, 96);
     margin: 40px auto 30px;
     border-top: solid 5px;
@@ -131,7 +124,6 @@ ul.nav {
     }
     .description {
         text-align: center;
-        width: 85%;
         padding-top: 1px;
     }
 }
