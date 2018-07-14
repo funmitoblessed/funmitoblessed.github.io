@@ -5,7 +5,11 @@
     .header {
         color: blueviolet;
         text-align: center;
-        font-size: 70%;
+        width: 90%;
+    }
+    .credit {
+        text-align: center;
+        text-decoration: none;
     }
 }
 
