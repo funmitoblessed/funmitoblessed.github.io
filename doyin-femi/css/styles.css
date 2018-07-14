@@ -1,0 +1,16 @@
+
+/* Media Queries */
+
+@media screen and (max-width: 460px) {
+    .header {
+        color: blueviolet;
+        text-align: center;
+        font-size: 70%;
+    }
+}
+
+/* @media screen and (max-width: 750px) {
+    .intro {
+        text-align: center;
+    }
+} */
