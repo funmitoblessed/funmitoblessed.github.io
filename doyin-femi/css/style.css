@@ -18,3 +18,28 @@
         text-align: center;
     }
 } */
+
+.slider>figure>img {
+    display: none;
+    margin: 0px auto;
+}
+
+.slider>figure.visible>img {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-color: #551A8B;
+    border-radius: 10px;
+}
+
+.slider>figure>figcaption {
+    display: none;
+}
+
+.slider>figure.visible>figcaption {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
