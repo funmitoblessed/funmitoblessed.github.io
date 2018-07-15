@@ -6,7 +6,7 @@ dateString += newDate.getFullYear();
 $('#currentYear').text(dateString);
 
 // Slider
-var slideInterval = 3500;
+var slideInterval = 5000;
 
 function getFigures() {
     return document.getElementById('carousel').getElementsByTagName('figure');

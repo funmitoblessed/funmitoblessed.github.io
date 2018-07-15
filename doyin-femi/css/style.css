@@ -1,15 +1,56 @@
+body {
+    background-color: rgb(255, 174, 248);
+    max-width: 100%;
+}
+
+.toast {
+    max-width: 94%;
+    margin: auto;
+}
+
+.individual-toast {
+    margin-top: 5%;
+}
+
+.femi-doyin-toast {
+    text-align: center;
+    margin: 5%;
+}
 
 /* Media Queries */
+/* Devices with width up to 400px */
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 400px) {
     .header {
-        color: blueviolet;
         text-align: center;
-        width: 90%;
+        width: 95%;
+        margin: auto;
     }
-    .credit {
+
+    .intro {
+        font-size: 100%;
+        font-weight: bold;
+    }
+
+    .name {
+        font-family: cursive;
+        width: 90%;
+        margin: 5% auto;   
+    }
+
+    .slider {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .footer {
         text-align: center;
-        text-decoration: none;
+        text-decoration-color: black;
+        margin-bottom: 5%;
+    }
+
+    a {
+        color: black;
     }
 }
 
@@ -19,9 +60,12 @@
     }
 } */
 
+/* Slider */
+
 .slider>figure>img {
     display: none;
     margin: 0px auto;
+    transition: ease;
 }
 
 .slider>figure.visible>img {
@@ -29,7 +73,7 @@
     position: relative;
     overflow: hidden;
     border-color: #551A8B;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 .slider>figure>figcaption {
