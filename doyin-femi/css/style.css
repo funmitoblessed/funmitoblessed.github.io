@@ -1,6 +1,23 @@
 body {
+    /* background-color: #e2dddd; */
     background-color: rgb(180, 88, 211);
+    /* background-color: #551a8b; */
+    /* background-color: teal; */
     max-width: 100%;
+}
+
+.header {
+    background-color: #d6b002;
+    width: 100%;
+    padding: 1%;
+}
+
+.intro {
+    background-color: #d6b002;
+}
+
+.name {
+    text-align: center;
 }
 
 .toast {
@@ -10,11 +27,18 @@ body {
 
 .individual-toast {
     margin-top: 5%;
+    text-align: center;
 }
 
 .femi-doyin-toast {
     text-align: center;
     margin: 5%;
+}
+
+.footer {
+    background-color: #d6b002;
+    padding: 1%;
+    /* background-color: #551a8b; */
 }
 
 /* Media Queries */
@@ -23,12 +47,12 @@ body {
 @media screen and (max-width: 400px) {
     .header {
         text-align: center;
-        width: 95%;
+        /* width: 95%; */
         margin: auto;
     }
 
     .intro {
-        font-size: 100%;
+        /* font-size: 100%; */
         font-weight: bold;
     }
 
@@ -46,7 +70,7 @@ body {
     .footer {
         text-align: center;
         text-decoration-color: black;
-        margin-bottom: 5%;
+        /* margin-bottom: 5%; */
     }
 
     a {
