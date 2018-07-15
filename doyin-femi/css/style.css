@@ -18,6 +18,9 @@ body {
 
 .name {
     text-align: center;
+    font-family: cursive;
+    width: 90%;
+    margin: 5% auto;   
 }
 
 .toast {
@@ -35,17 +38,19 @@ body {
     margin: 5%;
 }
 
+.audio-play {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .footer {
     background-color: #d6b002;
     padding: 1%;
     /* background-color: #551a8b; */
 }
 
-/* @media screen and (max-width: 750px) {
-    .intro {
-        text-align: center;
-    }
-} */
+
 
 /* Slider */
 
@@ -77,24 +82,25 @@ body {
 
 
 /* Media Queries */
+
+
 /* Devices with width up to 400px */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 470px) {
     .header {
         text-align: center;
-        /* width: 95%; */
         margin: auto;
     }
 
     .intro {
-        /* font-size: 100%; */
+        font-size: 100%;
         font-weight: bold;
     }
 
     .name {
-        font-family: cursive;
         width: 90%;
-        margin: 5% auto;   
+        font-size: 1.5em;
+        font-weight: bold;
     }
 
     .slider {
@@ -108,7 +114,72 @@ body {
         /* margin-bottom: 5%; */
     }
 
-    a {
+    /* a {
         color: black;
+    }    */
+}
+
+@media screen and (min-width: 471px) {
+    .header {
+        text-align: center;
+        margin: auto;
+    }
+    
+    .intro {
+        font-weight: bold;
+    }
+
+    .name {
+        width: 90%;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .slider {
+        width: 80%;
+        margin: auto;
+    }
+
+    .footer {
+        text-align: center;
+        text-decoration-color: black;
+        /* margin-bottom: 5%; */
+    }
+}
+
+
+ @media screen and (min-width: 600px) {
+    .intro {
+        text-align: center;
+        margin: auto;
+    }
+
+    .name {
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .intro {
+        text-align: center;
+        margin: auto;
+    }
+
+    .name {
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .intro {
+        text-align: center;
+        margin: auto;
+    }
+
+    .name {
+        margin-top: 2%;
+        margin-bottom: 2%;
     }
 }
