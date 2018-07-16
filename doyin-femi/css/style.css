@@ -158,6 +158,22 @@ body {
         margin-top: 3%;
         margin-bottom: 3%;
     }
+
+    .femi-doyin-toast,
+    .femi-toast, 
+    .doyin-toast {
+        font-size: 1.2em;
+    }
+
+    .individual-toast {
+        margin-top: 3%;
+        text-align: center;
+    }
+
+    .femi-doyin-toast {
+        margin-top: 2%;
+    }
+    
 }
 
 @media screen and (min-width: 800px) {

@@ -3,7 +3,9 @@ let newDate = new Date();
 let dateString = "";
 // get current year
 dateString += newDate.getFullYear();
-$('#currentYear').text(dateString);
+// set the span element to the current year
+let elem = document.querySelector('#currentYear');
+elem.innerHTML = dateString;
 
 // Slider
 var slideInterval = 5000;
