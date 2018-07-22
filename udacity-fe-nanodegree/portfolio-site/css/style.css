@@ -1,6 +1,6 @@
 /*
  *
- * Header
+ * HEADER
  *
  */
 
@@ -29,7 +29,13 @@
      padding-bottom: 5%;
  }
 
- .feature-one, 
+/*
+ *
+ * FEATURED WORK
+ *
+ */
+
+ .feature-one,
  .feature-two,
  .feature-three {
     margin: 15px;
@@ -58,48 +64,71 @@
 
  .feature-separator {
     width: 90%;
-    border: .5px solid #7d97ad;   
+    border: .5px solid #7d97ad;
+ }
+ 
+
+/*
+ *
+ * FOOTER
+ *
+ */
+
+ .credit {
+     text-align: center;
+     width: auto;
+     padding: 2% 0;
  }
 
+ a:hover,
+ a:visited {
+     text-decoration: none;
+ }
 
 
 /*
  *
- * Media Queries
+ * MEDIA QUERIES
  *
-*/
+ */
 
-/* Screens 475px and below */
+/* 
+ *
+ * Screens 475px and below
+ *
+ */
 
 @media screen and (max-width: 475px) {
     .container {
         display: flex;
+        padding: 2% 5% 0 0;
         flex-wrap: wrap;
-        width: 90%;
+        width: inherit;
+        margin: auto;
     }
     
     .header-logo {
-        padding-top: 10%;
-        width: 50%;
-        height: 20%;
-        margin: auto;
+        width: 20%;
+        margin: 2% auto;
         order: 0;
     }
     
     .header-title {
-        text-align: right;
+        margin-top: 2%;
+        width: 70%;
         order: 1;
-        margin-top: 20px;
     }
 
     .my-name {
         font-size: 1.5em;
         float: right;
-    }   
+        margin: 5% 0 0 10%;
+    }
 
     .my-title {
-        font-size: 1em;
+        font-size: 1.5em;
         float: right;
+        margin: 5% 0 0 10%;
     }
 
     .feature-text {
@@ -108,34 +137,36 @@
 
 }
 
-/* Screens between 476px and 760px */
+/* 
+ * 
+ * Screens between 476px and 750px
+ *
+ */
 
 @media screen and (min-width: 476px) {
     .container {
         display: flex;
-        flex-wrap: wrap;
-        width: 90%;
-        max-height: 10%;
-        padding: 10px;
-        margin: 0;
+        padding: 2% 5% 0 0;
+        width: inherit;
+        margin: auto;
     }
 
     .header-logo {
         width: 20%;
-        padding-top: 5%;
+        margin: 1% auto;
     }
 
     .header-title {
+        margin-top: 1%;
         width: 70%;
         text-align: right;
-        padding-top: 5%;
-        margin-left: 10%;
     }
 
     .my-name {
+        width: 70%;
         font-size: 2em;
         float: right;
-    }   
+    }
 
     .my-title {
         font-size: 1.5em;
@@ -169,31 +200,36 @@
     }
 }
 
-/* Screens 761px and above*/
+/* 
+ * 
+ * Screens 751px and above
+ *
+ */
 
-@media screen and (min-width: 761px) {
+@media screen and (min-width: 751px) {
     .container {
         display: flex;
-        width: 90%;
-        text-align: center;
-        /* margin: 0; */
+        padding: 1% 5% 0 0;
+        width: inherit;
+        margin: auto;
     }
 
     .header-logo {
-        padding-top: 2%;
+        width: 20%;
+        margin: 2% auto;
     }
 
     .header-title {
+        margin-top: 2%;
         width: 70%;
         text-align: right;
-        /* margin-left: 10%; */
-        margin-right: 0;
     }
 
     .my-name {
-        font-size: 2.3em;
+        width: 70%;
+        font-size: 2.5em;
         float: right;
-    }   
+    }
 
     .my-title {
         font-size: 2em;
@@ -227,6 +263,49 @@
 
     .feature-three {
         width: 30%;
+    }
+
+}
+
+/* 
+ *
+ * Screens above 950px
+ *
+ */
+
+@media screen and (min-width: 950px) {
+    .container {
+        display: flex;
+        width: inherit;
+        margin: auto;
+        padding: 2% 5% 0 0;
+    }
+
+    .header-logo {
+        width: 20%;
+        margin: 1% auto;
+    }
+    
+    .header-title {
+        margin-top: 1%;
+        width: 70%;
+    }
+
+    .my-name {
+        width: 70%;
+        font-size: 2.5em;
+        float: right;
+        margin: 2% 0 0 5%;
+    }
+
+    .my-title {
+        font-size: 2em;
+        float: right;
+        margin: 2% 0 0 5%;
+    }
+
+    .feature-text {
+        text-align: left;
     }
 
 }
