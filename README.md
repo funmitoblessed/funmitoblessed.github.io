@@ -1,6 +1,9 @@
 # ofunmito.github.io
-My Git Pages
 
-ALCwithGoogle final project  (Pixel Art Maker) link - https://ofunmito.github.io/pixel-art-maker
+One stop for all my front-end web development projects
 
-Project Repo - https://github.com/ofunmito/pixel-art-maker
+
+ALCwithGoogle final project  (Pixel Art Maker) at (https://ofunmito.github.io/pixel-art-maker)
+
+
+Front-End Nanodgree projects at (https://ofunmito.github.io/udacity-fe-nanodegree)
