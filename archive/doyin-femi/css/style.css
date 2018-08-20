@@ -1,0 +1,202 @@
+body {
+    /* background-color: #e2dddd; */
+    background-color: rgb(180, 88, 211);
+    /* background-color: #551a8b; */
+    /* background-color: teal; */
+    max-width: 100%;
+    height: 100%;
+}
+
+.header {
+    background-color: #d6b002;
+    width: 100%;
+    padding: 1%;
+}
+
+.intro {
+    background-color: #d6b002;
+}
+
+.name {
+    text-align: center;
+    font-family: cursive;
+    width: 90%;
+    margin: 5% auto;   
+}
+
+.toast {
+    max-width: 94%;
+    margin: auto;
+}
+
+.individual-toast {
+    margin-top: 5%;
+    text-align: center;
+}
+
+.femi-doyin-toast {
+    text-align: center;
+    margin: 5%;
+}
+
+.audio-play {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {
+    background-color: #d6b002;
+    padding: 1%;
+    /* background-color: #551a8b; */
+}
+
+
+
+/* Slider */
+
+.slider>figure>img {
+    display: none;
+    margin: 0px auto;
+    transition: ease;
+}
+
+.slider>figure.visible>img {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-color: #551A8B;
+    border-radius: 30px;
+}
+
+.slider>figure>figcaption {
+    display: none;
+}
+
+.slider>figure.visible>figcaption {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+
+/* Media Queries */
+
+
+/* Devices with width up to 400px */
+
+@media screen and (max-width: 470px) {
+    .header {
+        text-align: center;
+        margin: auto;
+    }
+
+    .intro {
+        font-size: 100%;
+        font-weight: bold;
+    }
+
+    .name {
+        width: 90%;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .slider {
+        max-width: 90%;
+        margin: auto;
+    }
+
+    .footer {
+        text-align: center;
+        text-decoration-color: black;
+        /* margin-bottom: 5%; */
+    }
+
+    /* a {
+        color: black;
+    }    */
+}
+
+@media screen and (min-width: 471px) {
+    .header {
+        text-align: center;
+        margin: auto;
+    }
+    
+    .intro {
+        font-weight: bold;
+    }
+
+    .name {
+        width: 90%;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .slider {
+        width: 80%;
+        margin: auto;
+    }
+
+    .footer {
+        text-align: center;
+        text-decoration-color: black;
+        /* margin-bottom: 5%; */
+    }
+}
+
+
+ @media screen and (min-width: 600px) {
+    .intro {
+        text-align: center;
+        margin: auto;
+    }
+
+    .name {
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .femi-doyin-toast,
+    .femi-toast, 
+    .doyin-toast {
+        font-size: 1.2em;
+    }
+
+    .individual-toast {
+        margin-top: 3%;
+        text-align: center;
+    }
+
+    .femi-doyin-toast {
+        margin-top: 2%;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+    .intro {
+        text-align: center;
+        margin: auto;
+    }
+
+    .name {
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .intro {
+        text-align: center;
+        margin: auto;
+    }
+
+    .name {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+}
