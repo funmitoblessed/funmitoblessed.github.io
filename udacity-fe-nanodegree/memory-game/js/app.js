@@ -1,6 +1,17 @@
+// Save Player Name
+let user = prompt("What is your name, please?")
+
+let playerName = document.getElementById('player');
+
+// show user on screen
+
+playerName.innerHTML = user;
+
 /*
  * Create a list that holds all of your cards
  */
+
+let cards = document.getElementsByClassName('card');
 
 
 /*
@@ -12,7 +23,8 @@
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    var currentIndex = array.length,
+        temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -24,6 +36,13 @@ function shuffle(array) {
 
     return array;
 }
+
+/* Convert HTMLCollection into Array using the spread operator
+ * shuffle the list of cards using the provided shuffle function
+ */
+cards = shuffle([...cards]);
+console.log(cards);
+
 
 
 /*
