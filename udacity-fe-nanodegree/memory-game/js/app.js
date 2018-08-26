@@ -11,8 +11,7 @@ playerName.innerHTML = user;
  * Create a list that holds all of your cards
  */
 
-let cards = document.getElementsByClassName('card');
-
+let cards = Array.from(document.getElementsByClassName('card'));
 
 /*
  * Display the cards on the page
@@ -37,11 +36,17 @@ function shuffle(array) {
     return array;
 }
 
-/* Convert HTMLCollection into Array using the spread operator
+/*
  * shuffle the list of cards using the provided shuffle function
  */
-cards = shuffle([...cards]);
-console.log(cards);
+
+shuffle(cards);
+
+// loop through cards
+for (let i = 0; i < cards.length; i++) {
+
+    console.log(cards[i].innerHTML);
+}
 
 
 
