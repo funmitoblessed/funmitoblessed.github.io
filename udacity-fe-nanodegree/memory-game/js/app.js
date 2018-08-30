@@ -24,7 +24,7 @@ $(function() {
 
     // Shuffle function from http://stackoverflow.com/a/2450976
     function shuffle(array) {
-        var currentIndex = array.length,
+        let currentIndex = array.length,
             temporaryValue, randomIndex;
 
         while (currentIndex !== 0) {
@@ -42,15 +42,22 @@ $(function() {
      * shuffle the list of cards using the provided shuffle function
      */
 
-    shuffle(cards);
-    // console.log(cards);
+    let cardList = shuffle(cards);
+    console.log(cardList);
 
-    let cardDeck = $('#deck');
+    let cardDeck = document.getElementsByClassName('.deck');
 
-    // loop through cards and add HTML to DOM
-    for (let i = 0; i < cards.length; i++) {
-        cardDeck.append(cards[i]);
+
+    function createCards() {
+        // loop through cards and add HTML to DOM
+        for (card of cardList) {
+            cardDeck.innerHTML = card;
+            console.log(card);
+        }
     }
+
+    createCards();
+    console.log(cardDeck);
 
 
 
@@ -67,14 +74,14 @@ $(function() {
 
     let eachCard = document.querySelectorAll('.card')
 
-    function displayCardSymbol() {
-        for (let i = 0; i < eachCard.length; i++) {
-            eachCard[i].addEventListener('click', function() {
-                this.classList.add('open');
-            })
-        }
+    // function displayCardSymbol() {
+    //     for (card of cardList) {
+    //         eachCard[i].addEventListener('click', function() {
+    //             this.classList.add('open');
+    //         })
+    //     }
 
-    }
+    // }
 
 
 
