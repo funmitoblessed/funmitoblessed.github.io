@@ -14,7 +14,9 @@ playerName.innerHTML = user;
  */
 
 
-// create an empty list for cards
+// all variables
+
+let openCards = [];
 
 let cardList = ['<i class="fa fa-diamond"></i>', '<i class="a fa-paper-plane-o"></i>', '<i class="fa fa-anchor"></i>', '<i class="fa fa-bolt"></i>',
     '<i class="fa fa-cube"></i>', '<i class="fa fa-anchor"></i>', '<i class="fa fa-leaf"></i>', '<i class="fa fa-bicycle"></i>',
@@ -60,14 +62,12 @@ function createCards() {
         eachCard.innerHTML = (shuffledCards[i]);
         eachCard.classList.add('card');
         cardHolder.appendChild(eachCard);
-        console.log(eachCard);
+        // console.log(eachCard);
     }
 
 }
 
 createCards();
-
-
 
 /*
  * set up the event listener for a card. If a card is clicked:
@@ -80,17 +80,22 @@ createCards();
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
 
-// const individualCard = document.getElementsByTagName('li')
+// function to display card symbol on click
+function displayCardSymbol() {
+    const individualCard = document.querySelectorAll('.card');
 
-// function displayCardSymbol() {
-//     let listOfCards = document.getElementsByClassName('card');
+    for (const card of individualCard) {
+        card.addEventListener('click', function() {
+            // alert('you clicked on this card');
+            card.classList.add('open', 'show');
+            // openCards.push(this);
+            // console.log(openCards);
+        });
+    }
 
-//     listOfCards.addEventListener('click', function () {
-//         alert('you clicked on this card');
-//     })    
-// }
+}
 
-// displayCardSymbol();
+displayCardSymbol();
 
 // });
 
