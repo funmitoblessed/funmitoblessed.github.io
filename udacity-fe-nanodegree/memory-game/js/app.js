@@ -1,5 +1,4 @@
-// $(function() {
-//get user name
+// get user name
 let user = prompt("What is your name, please?")
 
 let playerName = document.getElementById('player');
@@ -13,16 +12,22 @@ playerName.innerHTML = user;
  * Create a list that holds all of your cards
  */
 
+// declare all variables
 
-// all variables
 
+// list of open cards
 let openCards = [];
 
+let matchedCards = [];
+
+// list of cards
 let cardList = ['<i class="fa fa-diamond"></i>', '<i class="fa fa-paper-plane-o"></i>', '<i class="fa fa-anchor"></i>', '<i class="fa fa-bolt"></i>',
     '<i class="fa fa-cube"></i>', '<i class="fa fa-anchor"></i>', '<i class="fa fa-leaf"></i>', '<i class="fa fa-bicycle"></i>',
     '<i class="fa fa-diamond"></i>', '<i class="fa fa-bomb"></i>', '<i class="fa fa-leaf"></i>', '<i class="fa fa-bomb"></i>',
     '<i class="fa fa-bolt"></i>', '<i class="fa fa-bicycle"></i>', '<i class="fa fa-paper-plane-o"></i>', '<i class="fa fa-cube"></i>'
 ];
+
+let cardHolder = document.querySelector('.deck')
 
 
 /*
@@ -48,26 +53,25 @@ function shuffle(array) {
     return array;
 }
 
+// shuffle list of cards
 let shuffledCards = shuffle(cardList);
 
-// console.log(shuffledCards);
-
+// create Game Board
 function createCards() {
 
-    let cardHolder = document.querySelector('.deck')
-
-    for (let i = 0; i < cardList.length; i++) {
+    for (let i = 0; i < shuffledCards.length; i++) {
         let eachCard = document.createElement('li');
-        // cardContainer.push(eachCard);
-        eachCard.innerHTML = (shuffledCards[i]);
         eachCard.classList.add('card');
+        eachCard.innerHTML = (shuffledCards[i]);
         cardHolder.appendChild(eachCard);
+        displayCardSymbol(eachCard);
+
         // console.log(eachCard);
+
     }
 
-}
+};
 
-createCards();
 
 /*
  * set up the event listener for a card. If a card is clicked:
@@ -80,27 +84,75 @@ createCards();
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
 
-// function to display card symbol on click
-function displayCardSymbol() {
-    const individualCard = document.querySelectorAll('.card');
+const allCards = document.getElementsByClassName('card');
 
-    for (const card of individualCard) {
-        card.addEventListener('click', function() {
-            // alert('you clicked on this card');
-            card.classList.add('open', 'show');
-            // openCards.push(this);
-            // console.log(openCards);
-        });
+// Event Listener for click
+function displayCardSymbol(eachCard) {
+
+    eachCard.addEventListener('click', function() {
+        let firstCard = this;
+
+
+        if (openCards.length === 1) {
+            let secondCard = this;
+            secondCard.classList.add('open', 'show', );
+            openCards.push(secondCard);
+
+            compareCards(openCards);
+
+        } else { // if (openCards.length === 0) 
+
+            firstCard.classList.add('open', 'show');
+            openCards.push(firstCard);
+
+        }
+
+
+    });
+
+};
+
+
+// function to compare cards when clicked 
+function compareCards() {
+
+    if ((openCards.length === 2) && (openCards[0].innerHTML === openCards[1].innerHTML)) {
+        openCards[0].classList.add('match');
+        openCards[1].classList.add('match');
+        matched();
+        openCards = [];
+    } else { // if ((openCards.length === 2) && (openCards[0].innerHTML !== openCards[1].innerHTML)) 
+
+        openCards[0].classList.remove('open', 'show');
+        openCards[1].classList.remove('open', 'show');
+        openCards = [];
     }
+}
+
+
+function matched() {
+    matchedCards.push(openCards[0], openCards[1]);
+    // console.log(openCards);
+    // console.log(matchedCards);
+    allmatched();
 
 }
 
-displayCardSymbol();
+// counter function
 
+
+//function to determine if cards have all matched
+function allmatched() {
+    if (matchedCards.length === 16) {
+        alert('Great Job! You win');
+    }
+}
+createCards();
 // });
 
 
+// TODO - not sure how yet
 
-
-
-// });
+/* fix bug that allows clicking on the same card twice 
+ * which turns it into the natched state
+ */
