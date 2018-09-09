@@ -18,14 +18,19 @@ let cardList = ['<i class="fa fa-diamond"></i>', '<i class="fa fa-paper-plane-o"
     '<i class="fa fa-bolt"></i>', '<i class="fa fa-bicycle"></i>', '<i class="fa fa-paper-plane-o"></i>', '<i class="fa fa-cube"></i>'
 ];
 
-// select parent element for cards
-let cardHolder = document.querySelector('.deck');
+// star variable
+let starsHolder = document.querySelector('.stars');
 
+// move counter initialization
 let movesParent = document.querySelector('.moves');
 
 let noOfMoves = movesParent.innerHTML = 0;
 
-let starsHolder = document.querySelector('.stars');
+// reset game variable init
+let reset = document.querySelector('.restart');
+
+// select parent element for cards
+let cardHolder = document.querySelector('.deck');
 
 
 /*
@@ -138,13 +143,6 @@ function matched() {
     allmatched();
 }
 
-//function to determine game win
-function allmatched() {
-    if (matchedCards.length === 16) {
-        alert(`Congratulations ${user}! You won this game in ${noOfMoves + 1} moves and have been awarded ${starsHolder.childElementCount} stars`);
-    }
-}
-
 // move counting function
 function countMoves() {
     noOfMoves++;
@@ -153,10 +151,30 @@ function countMoves() {
         starsHolder.firstElementChild.remove();
     } else if (noOfMoves === 14) {
         starsHolder.firstElementChild.remove();
-    } else if (noOfMoves > 18) { // player will have no star rating
+    } else if (noOfMoves === 18) { // player will have no star rating
         starsHolder.firstElementChild.remove();
     }
 }
+
+//function to determine game win
+function allmatched() {
+    if (matchedCards.length === 16) {
+        alert(`Congratulations ${user}! You won this game in ${noOfMoves + 1} moves and have been awarded ${starsHolder.childElementCount} stars`);
+    }
+}
+
+// function to reset game board
+reset.addEventListener('click', function() {
+    cardHolder.innerHTML = '';
+    createCards();
+    noOfMoves = 0;
+    movesParent.innerHTML = 0;
+    starsHolder.innerHTML = `<li><i class="fa fa-star"></i></li>
+    <li><i class="fa fa-star"></i></li>
+    <li><i class="fa fa-star"></i></li>`;
+})
+
+
 
 createCards();
 
