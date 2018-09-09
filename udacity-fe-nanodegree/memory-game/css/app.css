@@ -110,3 +110,7 @@ h1 {
     float: right;
     cursor: pointer;
 }
+
+.reset-game {
+    padding-right: 5px;
+}

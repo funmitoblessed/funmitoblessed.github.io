@@ -28,7 +28,6 @@ let noOfMoves = movesParent.innerHTML = 0;
 let starsHolder = document.querySelector('.stars');
 
 
-// $(function() {
 /*
  * Create a list that holds all of your cards
  */
@@ -64,18 +63,13 @@ let shuffledCards = shuffle(cardList);
 
 // create Game Board
 function createCards() {
-
-    for (let i = 0; i < shuffledCards.length; i++) {
+    for (const card of shuffledCards) {
         let eachCard = document.createElement('li');
         eachCard.classList.add('card');
-        eachCard.innerHTML = (shuffledCards[i]);
+        eachCard.innerHTML = (card);
         cardHolder.appendChild(eachCard);
         displayCardSymbol(eachCard);
-
-        // console.log(eachCard);
-
     }
-
 };
 
 
@@ -90,8 +84,6 @@ function createCards() {
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
 
-
-
 // Event Listener for click
 function displayCardSymbol(eachCard) {
 
@@ -104,11 +96,12 @@ function displayCardSymbol(eachCard) {
         if (openCards.length === 1) {
             // console.log(this);
             let secondCard = this;
-            secondCard.classList.add('open', 'show', );
+            secondCard.classList.add('open', 'show');
             openCards.push(secondCard);
 
             compareCards(openCards);
             countMoves();
+
 
         } else { // if (openCards.length === 0)
             // console.log(this);
@@ -139,22 +132,16 @@ function compareCards() {
     }
 }
 
-
+// function to add compared cards to matched list
 function matched() {
     matchedCards.push(openCards[0], openCards[1]);
-    // console.log(openCards);
-    // console.log(matchedCards);
     allmatched();
-
 }
 
-// counter function
-
-
-//function to determine if cards have all matched
+//function to determine game win
 function allmatched() {
     if (matchedCards.length === 16) {
-        alert('Great Job! You win');
+        alert(`Congratulations ${user}! You won this game in ${noOfMoves + 1} moves and have been awarded ${starsHolder.childElementCount} stars`);
     }
 }
 
@@ -162,21 +149,21 @@ function allmatched() {
 function countMoves() {
     noOfMoves++;
     movesParent.innerHTML = noOfMoves;
-    if (noOfMoves === 18) { // least no of moves to match all cards is 16
+    if (noOfMoves === 10) { // least number of moves to match all cards is 8
         starsHolder.firstElementChild.remove();
-    } else if (noOfMoves === 22) {
+    } else if (noOfMoves === 14) {
         starsHolder.firstElementChild.remove();
-    } else if (noOfMoves > 30) { // player will have no star rating
+    } else if (noOfMoves > 18) { // player will have no star rating
         starsHolder.firstElementChild.remove();
     }
 }
 
 createCards();
-// });
 
 
-// TODO - not sure how yet
+// TODO
 
-/* fix bug that allows clicking on the same card twice 
- * which turns it into the natched state
+/* fix bug that allows clicking on the same card twice which turns it into the matched state
+ * change game win alert to modal
+ * apply some nicer styles
  */
