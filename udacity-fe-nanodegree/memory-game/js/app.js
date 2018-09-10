@@ -94,7 +94,6 @@ function createCards() {
 function displayCardSymbol(eachCard) {
 
     eachCard.addEventListener('click', function() {
-        event.preventDefault();
         let firstCard = this;
 
 
@@ -114,7 +113,7 @@ function displayCardSymbol(eachCard) {
             openCards.push(firstCard);
 
         }
-
+        event.preventDefault();
     });
 
 };
@@ -164,22 +163,24 @@ function countMoves() {
 //function to determine game win
 function allmatched() {
     if (matchedCards.length === 16) {
-        alert(`Congratulations ${user}! You won this game in ${noOfMoves + 1} moves and have been awarded ${starsHolder.childElementCount} stars`);
+        alert(`Congratulations ${user}! You won this game with ${noOfMoves + 1} moves in ${m} min : ${s} sec and have been awarded ${starsHolder.childElementCount} stars`);
         clearInterval(t);
+        console.log(m);
     }
 }
 
+let h = 0;
+let m = 0;
+let s = 0;
 // timer function
 function gameTimer() {
-    let h = 0;
-    let m = 0;
-    let s = 0;
     m = addZero(m);
     let timer = document.getElementById('timer');
     t = setInterval(function() {
         s++;
         if (s === 60) {
             m++;
+            m = addZero(m);
             s = 00;
         }
         if (m == 60) {
@@ -192,7 +193,7 @@ function gameTimer() {
     }, 1000);
 
 }
-
+console.log(m);
 // add zero in front of numbers < 10
 function addZero(i) {
     if (i < 10) { i = "0" + i };
