@@ -74,6 +74,7 @@ function createCards() {
         eachCard.innerHTML = (card);
         cardHolder.appendChild(eachCard);
         displayCardSymbol(eachCard);
+        resetGame();
     }
 };
 
@@ -94,7 +95,6 @@ function displayCardSymbol(eachCard) {
 
     eachCard.addEventListener('click', function() {
         event.preventDefault();
-
         let firstCard = this;
 
 
@@ -147,11 +147,16 @@ function matched() {
 function countMoves() {
     noOfMoves++;
     movesParent.innerHTML = noOfMoves;
+    if (noOfMoves === 1) {
+        gameTimer();
+    }
     if (noOfMoves === 10) { // least number of moves to match all cards is 8
         starsHolder.firstElementChild.remove();
-    } else if (noOfMoves === 14) {
+    }
+    if (noOfMoves === 14) {
         starsHolder.firstElementChild.remove();
-    } else if (noOfMoves === 18) { // player will have no star rating
+    }
+    if (noOfMoves === 18) { // player will have no star rating
         starsHolder.firstElementChild.remove();
     }
 }
@@ -160,19 +165,55 @@ function countMoves() {
 function allmatched() {
     if (matchedCards.length === 16) {
         alert(`Congratulations ${user}! You won this game in ${noOfMoves + 1} moves and have been awarded ${starsHolder.childElementCount} stars`);
+        clearInterval(t);
     }
 }
 
+// timer function
+function gameTimer() {
+    let h = 0;
+    let m = 0;
+    let s = 0;
+    m = addZero(m);
+    let timer = document.getElementById('timer');
+    t = setInterval(function() {
+        s++;
+        if (s === 60) {
+            m++;
+            s = 00;
+        }
+        if (m == 60) {
+            h++;
+            m = 00;
+            s = 00;
+        }
+        s = addZero(s);
+        timer.innerHTML = h + ":" + m + ":" + s;
+    }, 1000);
+
+}
+
+// add zero in front of numbers < 10
+function addZero(i) {
+    if (i < 10) { i = "0" + i };
+    return i;
+}
+
 // function to reset game board
-reset.addEventListener('click', function() {
-    cardHolder.innerHTML = '';
-    createCards();
-    noOfMoves = 0;
-    movesParent.innerHTML = 0;
-    starsHolder.innerHTML = `<li><i class="fa fa-star"></i></li>
-    <li><i class="fa fa-star"></i></li>
-    <li><i class="fa fa-star"></i></li>`;
-})
+function resetGame() {
+    reset.addEventListener('click', function() {
+        cardHolder.innerHTML = '';
+        createCards();
+        noOfMoves = 0;
+        movesParent.innerHTML = 0;
+        starsHolder.innerHTML = `<li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>
+        <li><i class="fa fa-star"></i></li>`;
+        clearInterval(t);
+        timer.innerHTML = '0:00:00';
+    })
+}
+
 
 
 

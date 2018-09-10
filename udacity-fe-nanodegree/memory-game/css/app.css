@@ -114,3 +114,7 @@ h1 {
 .reset-game {
     padding-right: 5px;
 }
+
+#timer {
+    margin-left: 20px;
+}
