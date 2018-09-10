@@ -212,6 +212,9 @@ function resetGame() {
         <li><i class="fa fa-star"></i></li>`;
         clearInterval(t);
         timer.innerHTML = '0:00:00';
+        h = 0;
+        m = 0;
+        s = 0;
     })
 }
 
