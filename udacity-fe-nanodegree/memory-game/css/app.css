@@ -118,3 +118,7 @@ h1 {
 #timer {
     margin-left: 20px;
 }
+
+.deactivate {
+    pointer-events: none;
+}
