@@ -165,7 +165,7 @@ function allmatched() {
     if (matchedCards.length === 16) {
         alert(`Congratulations ${user}! You won this game with ${noOfMoves + 1} moves in ${h} hr ${m} min ${s} sec and have been awarded ${starsHolder.childElementCount} stars`);
         clearInterval(t);
-        createCards();
+        resetGame();
     }
 }
 
