@@ -163,7 +163,7 @@ function countMoves() {
 //function to determine game win
 function allmatched() {
     if (matchedCards.length === 16) {
-        alert(`Congratulations ${user}! You won this game with ${noOfMoves + 1} moves in ${m} min : ${s} sec and have been awarded ${starsHolder.childElementCount} stars`);
+        alert(`Congratulations ${user}! You won this game with ${noOfMoves + 1} moves in ${h} hr ${m} min ${s} sec and have been awarded ${starsHolder.childElementCount} stars`);
         clearInterval(t);
         console.log(m);
     }
@@ -185,7 +185,9 @@ function gameTimer() {
         }
         if (m == 60) {
             h++;
+            h = addZero(h);
             m = 00;
+            m = addZero(m);
             s = 00;
         }
         s = addZero(s);
@@ -218,11 +220,7 @@ function resetGame() {
     })
 }
 
-
-
-
 createCards();
-
 
 // TODO
 
