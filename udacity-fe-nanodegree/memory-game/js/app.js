@@ -126,6 +126,7 @@ function compareCards() {
         openCards[0].classList.add('match');
         openCards[1].classList.add('match');
         matched();
+        allmatched();
         openCards = [];
     } else { // if ((openCards.length === 2) && (openCards[0].innerHTML !== openCards[1].innerHTML)) 
         setTimeout(function() {
@@ -139,7 +140,6 @@ function compareCards() {
 // function to add compared cards to matched list
 function matched() {
     matchedCards.push(openCards[0], openCards[1]);
-    allmatched();
 }
 
 // move counting function
@@ -165,7 +165,7 @@ function allmatched() {
     if (matchedCards.length === 16) {
         alert(`Congratulations ${user}! You won this game with ${noOfMoves + 1} moves in ${h} hr ${m} min ${s} sec and have been awarded ${starsHolder.childElementCount} stars`);
         clearInterval(t);
-        console.log(m);
+        createCards();
     }
 }
 
@@ -195,7 +195,7 @@ function gameTimer() {
     }, 1000);
 
 }
-console.log(m);
+
 // add zero in front of numbers < 10
 function addZero(i) {
     if (i < 10) { i = "0" + i };
@@ -227,4 +227,6 @@ createCards();
 /* 
  * change game win alert to modal
  * apply some nicer styles
+ * fix bug not allowing the alert to work after reseting game
+ * 
  */
