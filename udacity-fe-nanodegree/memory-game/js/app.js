@@ -5,11 +5,6 @@ let user = prompt("What is your name, please?")
 
 let playerName = document.getElementById('player');
 
-// list of open cards
-let openCards = [];
-
-// array for matched cards
-let matchedCards = [];
 
 // list of cards
 let cardList = ['<i class="fa fa-diamond"></i>', '<i class="fa fa-paper-plane-o"></i>', '<i class="fa fa-anchor"></i>', '<i class="fa fa-bolt"></i>',
@@ -32,6 +27,11 @@ let reset = document.querySelector('.restart');
 // select parent element for cards
 let cardHolder = document.querySelector('.deck');
 
+// list of open cards
+let openCards = [];
+
+// array for matched cards
+let matchedCards = [];
 
 /*
  * Create a list that holds all of your cards
@@ -73,10 +73,13 @@ function createCards() {
         eachCard.classList.add('card');
         eachCard.innerHTML = (card);
         cardHolder.appendChild(eachCard);
+        openCards = [];
+        matchedCards = [];
         displayCardSymbol(eachCard);
         resetGame();
     }
 };
+
 
 
 /*
