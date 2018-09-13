@@ -206,6 +206,7 @@ function addZero(i) {
 function resetGame() {
     reset.addEventListener('click', function() {
         cardHolder.innerHTML = '';
+        shuffle(cardList);
         createCards();
         noOfMoves = 0;
         movesParent.innerHTML = 0;
