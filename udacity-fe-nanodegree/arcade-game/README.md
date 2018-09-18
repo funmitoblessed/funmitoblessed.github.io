@@ -1,6 +1,13 @@
-frontend-nanodegree-arcade-game
-===============================
+## Udacity Front End Nanodegree
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+### Object Oriented JavaScript
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+#### Classic Arcade Game Clone
+
+#### by
+
+[Oluwafunmito Odefemi](https://ng.linkedin.com/in/ooluwafunmito)
+
+To play this game, Click [here](https://ofunmito.github.io/udacity-fe-nanodegree/arcade-game).
+
+The aim of the game is to see how many times you can cross the stone paths and reach the water while avoiding being hit by the enemies on the screen. Use the direction arrows (**up**, **down**, **right**, **left**) to control the player in the same direction repectively. If you get hit by the enemy, your score resets and you start all over again.
