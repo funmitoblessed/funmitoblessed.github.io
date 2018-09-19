@@ -1,16 +1,18 @@
 // Enemies our player must avoid
-let Enemy = function(x, y) {
+let Enemy = function(x, y, speed) {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
     // enemy position
     this.x = x;
-    this.y = y
+    this.y = y;
+    // enemy speed
+    this.speed = speed;
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
-    this.speed = 20;
+
 };
 
 // Update the enemy's position, required method for game
@@ -19,6 +21,12 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+
+    if (this.x < 500) {
+        this.x += this.speed * dt + Math.floor(Math.random() * 5);
+    } else {
+        this.x = -50;
+    }
 
 };
 
@@ -67,6 +75,7 @@ Player.prototype.handleInput = function(key) {
 
 Player.prototype.reset = function(key) {
     if ((key === 'up') && (this.y === -10)) {
+        this.x = 200;
         this.y = 410;
     }
 };
@@ -77,12 +86,19 @@ Player.prototype.reset = function(key) {
 
 let player = new Player(200, 410); // pass in initial position
 
-let enemyOne = new Enemy(0, 60);
-let enemyTwo = new Enemy(190, 300);
-let enemyThree = new Enemy(80, 200);
-let enemyFour = new Enemy(300, 139);
+// generate some random numbers
+let randOne = Math.floor(Math.random() * 150);
+let randTwo = Math.floor(Math.random() * 100);
+let randThree = Math.floor(Math.random() * 230);
+let randFour = Math.floor(Math.random() * 420);
 
-let allEnemies = [enemyOne, enemyTwo, enemyThree, enemyFour];
+
+// create new instances of enemy with random values of speed and x-position
+let allEnemies = [new Enemy(randOne, 200, randThree),
+    new Enemy(randTwo, 140, randOne),
+    new Enemy(randThree, 300, randFour),
+    new Enemy(randFour, 67, randTwo),
+]
 
 
 console.log(allEnemies, player);
