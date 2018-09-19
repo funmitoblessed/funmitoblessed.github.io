@@ -22,7 +22,7 @@ One stop for all my front-end web development projects
 [Classic Arcade Game Clone](https://ofunmito.github.io/udacity-fe-nanodegree/arcade-game)
 
 
-## [The Udemy Web Dev Bootcamp]
+## The Udemy Web Dev Bootcamp
 
 [Simple Score Keeper App](https://ofunmito.github.io/web-dev-bootcamp/score-keeper-app)
 
