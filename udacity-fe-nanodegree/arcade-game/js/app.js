@@ -25,11 +25,10 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-
     if (this.x < 500) {
         this.x += this.speed * dt + Math.floor(Math.random() * 5);
     } else {
-        this.x = -50;
+        this.x = -100;
     }
 
 };
@@ -58,10 +57,14 @@ Player.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
     for (const enemy of allEnemies) {
-        // if (this.y = enemy.y) {
-        // console.log(this.y, enemy.y);
-        // }
+        if ((this.x < enemy.x + 80) &&
+            (this.x + 80 > enemy.x) &&
+            (this.y < enemy.y + 60) &&
+            (60 + this.y > enemy.y)) {
+            resetPlayer();
+        }
     }
+
 };
 
 // render method for the Player class
@@ -86,19 +89,21 @@ Player.prototype.handleInput = function(key) {
 // player scoring method. Adds 1 to the score once the player reaches the river
 Player.prototype.score = function(key) {
     if (this.y <= 0) {
-        this.reset()
+        if ((key === 'up') && (this.y === -10)) {
+            this.x = 200;
+            this.y = 410;
+        }
         gameScore++;
         scoreHolder.innerHTML = gameScore;
     }
 };
 
-// reset functionality. sets score to zero if player is hit
-Player.prototype.reset = function(key) {
-    if ((key === 'up') && (this.y === -10)) {
-        this.x = 200;
-        this.y = 410;
-    }
-};
+function resetPlayer() {
+    player.x = 200;
+    player.y = 410;
+    gameScore = 0;
+    scoreHolder.innerHTML = gameScore;
+}
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
@@ -132,7 +137,6 @@ document.addEventListener('keyup', function(e) {
 
     player.handleInput(allowedKeys[e.which]);
     player.score(allowedKeys[e.which]);
-    player.reset(allowedKeys[e.which]);
 });
 
 console.log(allEnemies[0], allEnemies[1], allEnemies[2], allEnemies[3], player);
