@@ -4,7 +4,9 @@ One stop for all my front-end web development projects
 
 ## Homepage
 
-[Landing Page](https://ofunmito.github.io)
+[Redesigned Landing Page - September 20 2018](https://ofunmito.github.io)
+
+[First Landing Page Design (Archived September 20, 2018)](https://ofunmito.github.io/archive/ofunmito.github.io-v1)
 
 ## ALCwithGoogle final project  
 
