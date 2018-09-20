@@ -130,6 +130,8 @@ let allEnemies = [new Enemy(randOne, 230, randThree),
     new Enemy(randFour, 60, randTwo),
 ]
 
+gameTimer();
+
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
@@ -143,5 +145,36 @@ document.addEventListener('keyup', function(e) {
     player.handleInput(allowedKeys[e.which]);
     player.score(allowedKeys[e.which]);
 });
+
+let h = 0;
+let m = 0;
+let s = 0;
+// timer function
+function gameTimer() {
+    let timer = document.getElementById('timer');
+    t = setInterval(function() {
+        s++;
+        if (s === 60) {
+            m++;
+            m = addZero(m);
+            s = 00;
+        }
+        if (m == 60) {
+            h++;
+            h = addZero(h);
+            m = 00;
+            m = addZero(m);
+            s = 00;
+        }
+        s = addZero(s);
+        timer.innerHTML = h + ":" + m + ":" + s;
+    }, 1000);
+}
+
+// add zero in front of numbers < 10
+function addZero(i) {
+    if (i < 10) { i = "0" + i };
+    return i;
+}
 
 console.log(allEnemies[0], allEnemies[1], allEnemies[2], allEnemies[3], player);
