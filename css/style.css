@@ -11,6 +11,31 @@ body {
     color: #fff;
 }
 
+.header-title {
+    float: right;
+}
+
+.my-name {
+    color: #7d97ad;
+}
+
+.my-title {
+    color: #2d3c49;
+}
+
+.header-separator {
+    width: 90%;
+    color: #7d97ad;
+    border: 2px solid;
+}
+
+.img-responsive {
+    vertical-align: middle;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 5%;
+}
+
 
 /* HOME */
 
@@ -40,10 +65,11 @@ body {
 
 /* NOTICE */
 
-.notice {
+
+/* .notice {
     text-align: center;
     align-content: center;
-}
+} */
 
 .section-home {
     background-color: #fe7;
@@ -68,13 +94,6 @@ ul.nav {
 .social-media {
     margin-block-start: 1em;
     padding-bottom: .5em;
-}
-
-.footer-below {
-    background-color: #9b9797;
-    color: #fff;
-    padding-bottom: 2%;
-    padding-top: 9%;
 }
 
 .jumbotron {
@@ -110,10 +129,261 @@ ul.nav {
 }
 
 
-/* Media Queries */
+/*
+ *
+ * PORTFOLIO / FEATURED WORK
+ *
+ */
+
+.feature-one,
+.feature-two,
+.feature-three {
+    margin: 15px;
+    text-align: center;
+}
+
+.feature-text {
+    color: #7d97ad;
+    font-size: 2em;
+    margin: auto 5%;
+}
+
+.featured-separator {
+    max-width: 90%;
+    margin-top: 2px;
+    border: .5px solid #7d97ad;
+}
+
+.feature-title {
+    color: #2d3c49;
+}
+
+.feature-link {
+    color: #7d97ad;
+}
+
+.feature-separator {
+    width: 90%;
+    border: .5px solid #7d97ad;
+}
 
 
-/* Resize on smaller screen sizes */
+/*
+ *
+ * FOOTER
+ *
+ */
+
+.credit {
+    text-align: center;
+    width: auto;
+    padding: 2% 0;
+}
+
+a:hover,
+a:visited {
+    text-decoration: none;
+}
+
+
+/*
+ *
+ * MEDIA QUERIES
+ *
+ */
+
+
+/* 
+ *
+ * Screens 475px and below
+ *
+ */
+
+@media screen and (max-width: 475px) {
+    .container {
+        display: flex;
+        padding: 2% 5% 0 0;
+        flex-wrap: wrap;
+        width: inherit;
+        margin: auto;
+    }
+    .header-logo {
+        width: 20%;
+        margin: 2% auto;
+        order: 0;
+    }
+    .header-title {
+        margin-top: 2%;
+        width: 70%;
+        order: 1;
+    }
+    .my-name {
+        font-size: 1.5em;
+        float: right;
+        margin: 5% 0 0 10%;
+    }
+    .my-title {
+        font-size: 1.5em;
+        float: right;
+        margin: 5% 0 0 10%;
+    }
+    .feature-text {
+        text-align: left;
+    }
+}
+
+
+/* 
+ * 
+ * Screens between 476px and 750px
+ *
+ */
+
+@media screen and (min-width: 476px) {
+    .container {
+        display: flex;
+        padding: 2% 5% 0 0;
+        width: inherit;
+        margin: auto;
+    }
+    .header-logo {
+        width: 20%;
+        margin: 1% auto;
+    }
+    .header-title {
+        margin-top: 1%;
+        width: 70%;
+        text-align: right;
+    }
+    .my-name {
+        width: 70%;
+        font-size: 2em;
+        float: right;
+    }
+    .my-title {
+        font-size: 1.5em;
+        float: right;
+    }
+    .featured-work {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .feature-separator {
+        display: none;
+    }
+    .feature-one {
+        width: inherit;
+        margin: auto;
+    }
+    .feature-two {
+        width: 40%;
+        margin: auto;
+    }
+    .feature-three {
+        width: 40%;
+        margin: auto;
+    }
+}
+
+
+/* 
+ * 
+ * Screens 751px and above
+ *
+ */
+
+@media screen and (min-width: 751px) {
+    .container {
+        display: flex;
+        padding: 1% 5% 0 0;
+        width: inherit;
+        margin: auto;
+    }
+    .header-logo {
+        width: 20%;
+        margin: 2% auto;
+    }
+    .header-title {
+        margin-top: 2%;
+        width: 70%;
+        text-align: right;
+    }
+    .my-name {
+        width: 70%;
+        font-size: 2.5em;
+        float: right;
+    }
+    .my-title {
+        font-size: 2em;
+        float: right;
+    }
+    .featured-work {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .featured-separator {
+        max-width: 90%;
+        margin-top: 2px;
+        border: .5px solid #7d97ad;
+    }
+    .feature-separator {
+        display: none;
+    }
+    .feature-one {
+        width: 30%;
+    }
+    .feature-two {
+        width: 30%;
+    }
+    .feature-three {
+        width: 30%;
+    }
+}
+
+
+/* 
+ *
+ * Screens above 950px
+ *
+ */
+
+@media screen and (min-width: 950px) {
+    .container {
+        display: flex;
+        width: inherit;
+        margin: auto;
+        padding: 2% 5% 0 0;
+    }
+    .header-logo {
+        width: 20%;
+        margin: 1% auto;
+    }
+    .header-title {
+        margin-top: 1%;
+        width: 70%;
+    }
+    .my-name {
+        width: 70%;
+        font-size: 2.5em;
+        float: right;
+        margin: 2% 0 0 5%;
+    }
+    .my-title {
+        font-size: 2em;
+        float: right;
+        margin: 2% 0 0 5%;
+    }
+    .feature-text {
+        text-align: left;
+    }
+}
+
+
+/* OLD QUERIES. Resize on smaller screen sizes */
 
 @media only screen and (max-width: 600px) {
     .img-thumbnail {
