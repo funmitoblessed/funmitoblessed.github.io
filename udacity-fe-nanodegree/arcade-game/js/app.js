@@ -1,3 +1,6 @@
+// get user name
+let user = prompt("Before we begin, please tell me your name");
+
 // variable to hold game score during play
 let scoreHolder = document.getElementById('score');
 let gameScore = scoreHolder.innerHTML = 0;
@@ -108,7 +111,7 @@ function resetPlayer() {
         gameScore--;
     }
     scoreHolder.innerHTML = gameScore;
-}
+};
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
@@ -146,11 +149,12 @@ document.addEventListener('keyup', function(e) {
     player.score(allowedKeys[e.which]);
 });
 
-let h = 0;
-let m = 0;
-let s = 0;
+
 // timer function
 function gameTimer() {
+    let h = 0;
+    let m = 0;
+    let s = 0;
     let timer = document.getElementById('timer');
     t = setInterval(function() {
         s++;
@@ -168,13 +172,32 @@ function gameTimer() {
         }
         s = addZero(s);
         timer.innerHTML = h + ":" + m + ":" + s;
+        if (m == 01 && s == 00) {
+            alert(`Congratulations ${user}! You won this game with ${gameScore} points! Press OK to restart the game`);
+            clearInterval(t);
+            timer.innerHTML = '0:00:00';
+            h = 0;
+            m = 0;
+            s = 0;
+            gameScore = 0;
+            scoreHolder.innerHTML = gameScore;
+            gameTimer();
+            console.log('Time Up!');
+        }
     }, 1000);
-}
+
+    // function endGame() {
+
+    // };
+
+    // endGame();
+};
 
 // add zero in front of numbers < 10
 function addZero(i) {
     if (i < 10) { i = "0" + i };
     return i;
-}
+};
+
 
 console.log(allEnemies[0], allEnemies[1], allEnemies[2], allEnemies[3], player);
