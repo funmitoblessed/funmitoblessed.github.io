@@ -97,6 +97,8 @@ ul.nav {
 }
 
 .jumbotron {
+    padding-top: 20px;
+    padding-bottom: 35px;
     margin: auto;
     width: 90%;
     background-color: rgb(223, 219, 219);
