@@ -98,10 +98,15 @@ Player.prototype.score = function(key) {
     }
 };
 
+// resets player position on collision and reduces game score
 function resetPlayer() {
     player.x = 200;
     player.y = 410;
-    gameScore = 0;
+    if (gameScore <= 0) {
+        gameScore = 0;
+    } else {
+        gameScore--;
+    }
     scoreHolder.innerHTML = gameScore;
 }
 
