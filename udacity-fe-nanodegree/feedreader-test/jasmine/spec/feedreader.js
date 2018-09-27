@@ -70,7 +70,8 @@ $(function() {
          * clicked and does it hide when clicked again.
          */
         it('menu changes', function() {
-            // expect($('.menu-icon-link').);
+            $('.menu-icon-link').click();
+            expect($('body').hasClass('menu-hidden')).toBe(false);
         });
 
     });
