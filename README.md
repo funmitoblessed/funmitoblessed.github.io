@@ -21,6 +21,8 @@ One stop for all my front-end web development projects
 
 [Classic Arcade Game Clone](https://ofunmito.github.io/udacity-fe-nanodegree/arcade-game)
 
+[Feed Reader Testing App](https://ofunmito.github.io/udacity-fe-nanodegree/feedreader-test)
+
 
 ## The Udemy Web Dev Bootcamp
 
