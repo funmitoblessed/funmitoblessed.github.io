@@ -72,6 +72,8 @@ $(function() {
         it('menu changes', function() {
             $('.menu-icon-link').click();
             expect($('body').hasClass('menu-hidden')).toBe(false);
+            $('.menu-icon-link').click();
+            expect($('body').hasClass('menu-hidden')).toBe(true);
         });
 
     });
