@@ -140,6 +140,3 @@ $(function() {
     });
 
 }());
-
-// expect($('div.feed a.entry-link article.entry')).not.toBe(null);
-// expect($('div.feed a.entry-link article.entry')).toBeDefined();
