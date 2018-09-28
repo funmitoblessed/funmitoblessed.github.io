@@ -30,10 +30,10 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-        it('each feed is defined', function() {
+        it('url is defined', function() {
             allFeeds.forEach(function(content, index) {
                 expect(allFeeds[index].url).toBeDefined();
-                expect(allFeeds[index].url).not.toBe(null);
+                expect(allFeeds[index].url.length).not.toBe(0);
             });
         });
 
@@ -42,10 +42,10 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-        it('each name is defined', function() {
+        it('name is defined', function() {
             allFeeds.forEach(function(content, index) {
                 expect(allFeeds[index].name).toBeDefined();
-                expect(allFeeds[index].name).not.toBe(null);
+                expect(allFeeds[index].name.length).not.toBe(0);
             });
         });
 
