@@ -88,13 +88,13 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
         beforeEach(function(done) {
-            loadFeed(0);
-            done();
+            loadFeed(0, done);
         });
 
         // spec
         it('has at least one entry', function(done) {
-            expect($('.feed').children.length > 0).toBe(true);
+            let feed = document.querySelector('.feed');
+            expect(feed.children.length > 0).toBe(true);
             done();
         });
 
@@ -107,6 +107,34 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+        const feed = document.querySelector('.feed');
+        const feedOneList = [];
+
+        beforeEach(function(done) {
+            // Load first feed in the loadFeed Array
+            loadFeed(0);
+            // Make an array from links in first feed and 
+            // push each link into the feedOneList Array
+            // before loading second feed so we can compare
+            Array.from(feed.children).forEach(function(link) {
+                feedOneList.push(link.innerText);
+            });
+            // Load second feed in the array
+            loadFeed(1, done);
+        });
+
+
+        it('changes content', function(done) {
+            /*
+             * Here, we must compare the loadFeed(1) children 
+             * to the feedOneList equivalents to be sure they
+             * are not equal
+             */
+            Array.from(feed.children).forEach(function(content, index) {
+                expect(content.innerText === feedOneList[index]).toBe(false);
+            });
+            done();
+        });
 
     });
 
