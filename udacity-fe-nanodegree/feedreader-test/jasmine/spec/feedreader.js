@@ -92,8 +92,10 @@ $(function() {
             done();
         });
 
-        it('has at least one entry', function() {
+        // spec
+        it('has at least one entry', function(done) {
             expect($('.feed').children.length > 0).toBe(true);
+            done();
         });
 
     });
