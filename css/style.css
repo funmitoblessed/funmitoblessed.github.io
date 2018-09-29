@@ -147,7 +147,7 @@ ul.nav {
 .feature-text {
     color: #7d97ad;
     font-size: 2em;
-    margin: auto 5%;
+    margin: auto 30%;
 }
 
 .featured-separator {
@@ -230,7 +230,7 @@ a:visited {
         margin: 5% 0 0 10%;
     }
     .feature-text {
-        text-align: left;
+        text-align: center
     }
 }
 
@@ -380,7 +380,7 @@ a:visited {
         margin: 2% 0 0 5%;
     }
     .feature-text {
-        text-align: left;
+        text-align: center;
     }
 }
 
