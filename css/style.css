@@ -136,12 +136,9 @@ a:visited {
  */
 
 @media screen and (max-width: 475px) {
-    /* TODO */
-    /* Description section: make mobile-friendly */
     .my-details {
         display: flex;
         flex-wrap: wrap;
-        /* width: inherit; */
     }
     .my-image {
         widows: 70%;
@@ -168,7 +165,7 @@ a:visited {
         display: flex;
         flex-wrap: wrap;
     }
-    .description {
+    .describe {
         width: 100%;
         margin: auto;
     }
@@ -214,6 +211,32 @@ a:visited {
  */
 
 @media screen and (min-width: 751px) {
+    .my-details {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .describe {
+        width: 60%;
+        margin: auto;
+    }
+    .my-image {
+        width: 40%;
+        margin: 3% auto;
+    }
+    .summary {
+        width: 90%;
+        margin: auto;
+        order: 1;
+    }
+    .title-separator-one {
+        display: none;
+    }
+    .title-separator-two {
+        color: #fff;
+        margin: 20px auto;
+        border: 1px solid #7d97ad;
+        width: 7
+    }
     .featured-work {
         width: 90%;
         margin: auto;
