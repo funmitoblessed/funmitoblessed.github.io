@@ -138,6 +138,21 @@ a:visited {
 @media screen and (max-width: 475px) {
     /* TODO */
     /* Description section: make mobile-friendly */
+    .my-details {
+        width: 80%;
+        margin: auto 10%;
+    }
+    .my-image {
+        widows: 100%;
+        margin: auto;
+    }
+    .title-separator-one,
+    .title-separator-two {
+        color: #fff;
+        margin: 20px;
+        border-top: solid 5px;
+        width: 90%;
+    }
 }
 
 
