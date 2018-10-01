@@ -61,7 +61,7 @@ ul.nav {
     color: #fff;
     margin: 20px;
     border-top: solid 5px;
-    width: 90%;
+    /* width: 90%; */
 }
 
 
@@ -144,7 +144,7 @@ a:visited {
         /* width: inherit; */
     }
     .my-image {
-        widows: 80%;
+        widows: 70%;
         margin: auto;
     }
     .title-separator-one,
@@ -164,6 +164,25 @@ a:visited {
  */
 
 @media screen and (min-width: 476px) {
+    .my-details {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .description {
+        width: 100%;
+        margin: auto;
+    }
+    .my-image {
+        width: 50%;
+        margin: auto;
+    }
+    .title-separator-two,
+    .title-separator-one {
+        color: #fff;
+        margin: 20px auto;
+        border: 1px solid #7d97ad;
+        width: 70%;
+    }
     .featured-work {
         width: 90%;
         margin: auto;
