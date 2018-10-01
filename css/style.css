@@ -387,7 +387,8 @@ a:visited {
 
 /* OLD QUERIES. Resize on smaller screen sizes */
 
-@media only screen and (max-width: 600px) {
+
+/* @media only screen and (max-width: 600px) {
     .img-thumbnail {
         width: 80%;
     }
@@ -404,4 +405,4 @@ a:visited {
     .img-thumbnail {
         width: 80%;
     }
-}
+} */
