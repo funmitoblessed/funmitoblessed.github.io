@@ -139,6 +139,8 @@ a:visited {
     /* TODO */
     /* Description section: make mobile-friendly */
     .my-details {
+        display: flex;
+        flex-wrap: wrap;
         width: 80%;
         margin: auto 10%;
     }
