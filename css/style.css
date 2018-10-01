@@ -11,24 +11,6 @@ body {
     color: #fff;
 }
 
-.header-title {
-    float: right;
-}
-
-.my-name {
-    color: #7d97ad;
-}
-
-.my-title {
-    color: #2d3c49;
-}
-
-.header-separator {
-    width: 90%;
-    color: #7d97ad;
-    border: 2px solid;
-}
-
 .img-responsive {
     vertical-align: middle;
     width: 90%;
@@ -49,46 +31,12 @@ body {
     margin-top: 5%;
 }
 
-
-/* .site-navigation {
-    width: 50%;
-    list-style: none;
-    justify-content: space-between;
-    display: flex;
-    flex-direction: row;
-    padding-left: 5%;
-    padding-right: 5%;
-    position: static;
-    float: none;
-} */
-
-
-/* NOTICE */
-
-
-/* .notice {
-    text-align: center;
-    align-content: center;
-} */
-
-.section-home {
-    background-color: #fe7;
-}
-
 img {
     vertical-align: middle;
 }
 
 ul.nav {
     transition: all .2s;
-}
-
-.footer-above {
-    background-color: #9b9797;
-    padding-top: 1em;
-    color: #fff;
-    text-align: center;
-    font-size: 1em;
 }
 
 .social-media {
@@ -114,20 +62,6 @@ ul.nav {
     margin: 20px;
     border-top: solid 5px;
     width: 90%;
-}
-
-.title-separator-two {
-    color: rgb(99, 96, 96);
-    margin: 40px auto 30px;
-    border-top: solid 5px;
-    width: 50%;
-}
-
-.title-separator-three {
-    color: rgb(99, 96, 96);
-    margin: 40px auto 30px;
-    border-top: solid 5px;
-    width: 50%;
 }
 
 
@@ -202,36 +136,8 @@ a:visited {
  */
 
 @media screen and (max-width: 475px) {
-    .container {
-        display: flex;
-        padding: 2% 5% 0 0;
-        flex-wrap: wrap;
-        width: inherit;
-        margin: auto;
-    }
-    .header-logo {
-        width: 20%;
-        margin: 2% auto;
-        order: 0;
-    }
-    .header-title {
-        margin-top: 2%;
-        width: 70%;
-        order: 1;
-    }
-    .my-name {
-        font-size: 1.5em;
-        float: right;
-        margin: 5% 0 0 10%;
-    }
-    .my-title {
-        font-size: 1.5em;
-        float: right;
-        margin: 5% 0 0 10%;
-    }
-    .feature-text {
-        text-align: center
-    }
+    /* TODO */
+    /* Description section: make mobile-friendly */
 }
 
 
@@ -242,30 +148,6 @@ a:visited {
  */
 
 @media screen and (min-width: 476px) {
-    .container {
-        display: flex;
-        padding: 2% 5% 0 0;
-        width: inherit;
-        margin: auto;
-    }
-    .header-logo {
-        width: 20%;
-        margin: 1% auto;
-    }
-    .header-title {
-        margin-top: 1%;
-        width: 70%;
-        text-align: right;
-    }
-    .my-name {
-        width: 70%;
-        font-size: 2em;
-        float: right;
-    }
-    .my-title {
-        font-size: 1.5em;
-        float: right;
-    }
     .featured-work {
         width: 90%;
         margin: auto;
@@ -273,18 +155,18 @@ a:visited {
         flex-wrap: wrap;
     }
     .feature-separator {
-        display: none;
+        display: inherit;
     }
     .feature-one {
         width: inherit;
         margin: auto;
     }
     .feature-two {
-        width: 40%;
+        width: inherit;
         margin: auto;
     }
     .feature-three {
-        width: 40%;
+        width: inherit;
         margin: auto;
     }
 }
@@ -292,35 +174,11 @@ a:visited {
 
 /* 
  * 
- * Screens 751px and above
+ * Screens 751px and up to 949px
  *
  */
 
 @media screen and (min-width: 751px) {
-    .container {
-        display: flex;
-        padding: 1% 5% 0 0;
-        width: inherit;
-        margin: auto;
-    }
-    .header-logo {
-        width: 20%;
-        margin: 2% auto;
-    }
-    .header-title {
-        margin-top: 2%;
-        width: 70%;
-        text-align: right;
-    }
-    .my-name {
-        width: 70%;
-        font-size: 2.5em;
-        float: right;
-    }
-    .my-title {
-        font-size: 2em;
-        float: right;
-    }
     .featured-work {
         width: 90%;
         margin: auto;
@@ -337,12 +195,15 @@ a:visited {
     }
     .feature-one {
         width: 30%;
+        margin: auto;
     }
     .feature-two {
         width: 30%;
+        margin: auto;
     }
     .feature-three {
         width: 30%;
+        margin: auto;
     }
 }
 
@@ -354,55 +215,7 @@ a:visited {
  */
 
 @media screen and (min-width: 950px) {
-    .container {
-        display: flex;
-        width: inherit;
-        margin: auto;
-        padding: 2% 5% 0 0;
-    }
-    .header-logo {
-        width: 20%;
-        margin: 1% auto;
-    }
-    .header-title {
-        margin-top: 1%;
-        width: 70%;
-    }
-    .my-name {
-        width: 70%;
-        font-size: 2.5em;
-        float: right;
-        margin: 2% 0 0 5%;
-    }
-    .my-title {
-        font-size: 2em;
-        float: right;
-        margin: 2% 0 0 5%;
-    }
-    .feature-text {
-        text-align: center;
-    }
+    /* TODO */
+    /* Add style for extra large screens */
+    /* Possibly have up to 5 work per line */
 }
-
-
-/* OLD QUERIES. Resize on smaller screen sizes */
-
-
-/* @media only screen and (max-width: 600px) {
-    .img-thumbnail {
-        width: 80%;
-    }
-    .my-image {
-        margin-top: 30%;
-    }
-    .description {
-        text-align: center;
-        padding-top: 1px;
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    .img-thumbnail {
-        width: 80%;
-    }
-} */
