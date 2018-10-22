@@ -22,4 +22,4 @@ One stop for all my Udacity Front-end Web Developer Nanodegree Projects
 
 ## Course 7: Front-End Applications
 
-[Restaurant Reviews App](https://ofunmito.github.io/udacity-fe-nanodegree/restaurant-reviews-app)
+[Restaurant Reviews App](https://ofunmito.github.io/udacity-fe-nanodegree/restaurant-reviews)

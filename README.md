@@ -24,7 +24,7 @@ One stop for all my front-end web development projects
 
 [Feed Reader Testing App](https://ofunmito.github.io/udacity-fe-nanodegree/feedreader-test)
 
-[Restaurant Reviews App](https://ofunmito.github.io/udacity-fe-nanodegree/restaurant-reviews-app)
+[Restaurant Reviews App](https://ofunmito.github.io/udacity-fe-nanodegree/restaurant-reviews)
 
 
 ## The Udemy Web Dev Bootcamp
