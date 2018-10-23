@@ -445,7 +445,7 @@ nav h1 a {
  * Devices from 726px up to 1024px
  */
 
-@media screen and (min-width: 726px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) and (min-width: 726px) {
     .filter-options h2 {
         text-align: left;
         margin-left: 5%;
@@ -482,26 +482,30 @@ nav h1 a {
 @media screen and (min-width: 1025px) {
     .filter-options h2 {
         text-align: left;
-        margin-left: 5%;
+        margin-left: 10%;
     }
     .filter-options select {
         margin-left: auto;
     }
     #neighborhoods-select {
-        width: 40%;
+        width: 30%;
         align-content: center;
-        margin-left: 5%;
+        margin-left: 10%;
     }
     #cuisines-select {
-        width: 40%;
+        width: 30%;
         align-content: center;
-        margin-left: 5%;
+        margin-left: 10%;
     }
     #restaurants-list {
         padding: 1% 0 10% 0;
+        margin: auto;
     }
     #restaurants-list li {
-        width: 60%;
-        margin: 5% auto;
+        width: 30%;
+        margin: 2% auto 0%;
+        display: inline-block;
+        padding: 0% 10px 5%;
+        /* margin: 5% auto; */
     }
 }
