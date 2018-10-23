@@ -380,6 +380,31 @@ nav h1 a {
         width: 70%;
         margin: 5% auto;
     }
+    #breadcrumb {
+        width: 90%;
+    }
+    .inside #map-container {
+        background-color: #ccc;
+        height: 40%;
+        width: 100%;
+        position: fixed;
+        top: 18%;
+    }
+    #restaurant-container {
+        width: 90%;
+        padding: 50% 0 0 10%;
+        margin-top: 60%;
+    }
+    #reviews-container {
+        width: 80%;
+    }
+    #reviews-list li {
+        position: inherit;
+        /* width: 80%; */
+    }
+    .inside #footer {
+        width: 100%;
+    }
 }
 
 
