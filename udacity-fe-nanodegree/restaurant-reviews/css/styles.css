@@ -323,7 +323,7 @@ nav h1 a {
     font-size: 24pt;
     font-weight: 300;
     letter-spacing: -1px;
-    padding-bottom: 1pt;
+    padding: 0 0 0 1pt;
 }
 
 #reviews-list {
@@ -419,10 +419,7 @@ nav h1 a {
         background: #000;
         border-radius: 5%;
         color: white;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        padding-left: inherit;
-        padding-right: inherit;
+        padding: 5%;
     }
     #reviews-list li :nth-child(2) {
         background: #000;
@@ -514,10 +511,7 @@ nav h1 a {
         background: #000;
         border-radius: 5%;
         color: white;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        padding-left: inherit;
-        padding-right: inherit;
+        padding: 5%;
     }
     #reviews-list li :nth-child(2) {
         background: #000;
@@ -611,10 +605,7 @@ nav h1 a {
         background: #000;
         border-radius: 5%;
         color: white;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        padding-left: inherit;
-        padding-right: inherit;
+        padding: 5%;
     }
     #reviews-list li :nth-child(2) {
         background: #000;
@@ -714,10 +705,7 @@ nav h1 a {
         background: #000;
         border-radius: 5%;
         color: white;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        padding-left: inherit;
-        padding-right: inherit;
+        padding: 5%;
     }
     #reviews-list li :nth-child(2) {
         background: #000;
@@ -818,10 +806,7 @@ nav h1 a {
         background: #000;
         border-radius: 5%;
         color: white;
-        padding-top: 5%;
-        padding-bottom: 5%;
-        padding-left: inherit;
-        padding-right: inherit;
+        padding: 5%;
     }
     #reviews-list li :nth-child(2) {
         background: #000;
