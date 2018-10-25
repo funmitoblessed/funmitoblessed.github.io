@@ -21,6 +21,7 @@ var markers = []
 
 if (navigator.serviceWorker) {
     navigator.serviceWorker.register('/udacity-fe-nanodegree/restaurant-reviews/sworker.js')
+        .then(console.log('Your worker was registered!'))
         .catch(function(err) {
             console.log(err);
         });
