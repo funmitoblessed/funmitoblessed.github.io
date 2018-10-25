@@ -5,19 +5,27 @@ var newMap
 var markers = []
 
 // Register ServiceWorker Script
-if ('serviceWorker' in navigator) {
-    window.addEventListener("load", () => {
-        navigator.serviceWorker.register('/udacity-fe-nanodegree/restaurant-reviews/sworker.js')
-            .then((res) => {
-                console.log(res);
-                console.log("Registration successful");
-            })
-            .catch((err) => {
-                console.log(err);
-                console.log("Registration not successful");
-            })
-    });
+// if (navigator.serviceWorker) {
+//     window.addEventListener("load", () => {
+//         navigator.serviceWorker.register('/udacity-fe-nanodegree/restaurant-reviews/sworker.js')
+//             .then((res) => {
+//                 console.log(res);
+//                 console.log("Registration successful");
+//             })
+//             .catch((err) => {
+//                 console.log(err);
+//                 console.log("Registration not successful");
+//             })
+//     });
+// }
+
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/udacity-fe-nanodegree/restaurant-reviews/sworker.js')
+        .catch(function(err) {
+            console.log(err);
+        });
 }
+
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
