@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="A simple restaurant reviews app">
+    <meta name="theme-color" content="#3397DB" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Normalize.css for better cross-browser consistency -->
@@ -18,11 +20,11 @@
     <header>
         <!-- Beginning nav -->
         <nav>
-            <h1><a href="/">Restaurant Reviews</a></h1>
+            <h1><a aria-label="Selected Restaurant" tabindex="1" href="/">Restaurant Reviews</a></h1>
         </nav>
         <!-- Beginning breadcrumb -->
-        <ul id="breadcrumb">
-            <li><a href="./udacity-fe-nanodegree/restaurant-reviews">Home</a></li>
+        <ul id="breadcrumb" role="navigation">
+            <li><a aria-label="Home" tabindex="1" href="/">Home</a></li>
         </ul>
         <!-- End breadcrumb -->
         <!-- End nav -->
@@ -33,21 +35,21 @@
     <main id="maincontent">
         <!-- Beginning map -->
         <section id="map-container">
-            <div id="map"></div>
+            <div id="map" aria-label="location" role="application"></div>
         </section>
         <!-- End map -->
         <!-- Beginning restaurant -->
-        <section id="restaurant-container">
-            <h1 id="restaurant-name"></h1>
-            <img id="restaurant-img">
-            <p id="restaurant-cuisine"></p>
-            <p id="restaurant-address"></p>
-            <table id="restaurant-hours"></table>
+        <section aria-label="Individual Restaurant Details" id="restaurant-container" aria-label="Resturant Details">
+            <h1 tabindex="1" id="restaurant-name"></h1>
+            <img tabindex="1" id="restaurant-img" alt="Restaurant Image">
+            <p tabindex="1" id="restaurant-cuisine"></p>
+            <p tabindex="1" id="restaurant-address"></p>
+            <table tabindex="1" id="restaurant-hours"></table>
         </section>
         <!-- end restaurant -->
         <!-- Beginning reviews -->
-        <section id="reviews-container">
-            <ul id="reviews-list"></ul>
+        <section aria-label="Individual Reviews" id="reviews-container">
+            <ul tabindex="1" id="reviews-list"></ul>
         </section>
         <!-- End reviews -->
     </main>
@@ -55,7 +57,7 @@
 
     <!-- Beginning footer -->
     <footer id="footer">
-        Copyright (c) <span id="year"></span> <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+        Copyright (c) <span id="year"></span> <a tabindex="1" href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
     </footer>
     <!-- End footer -->
 
@@ -80,3 +82,11 @@
 </body>
 
 </html>
+
+<!-- Helpers
+     https://www.washington.edu/accessibility/web/keyboard/
+     https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/tabIndex
+     https://matthewcranford.com/restaurant-reviews-app-walkthrough-part-3-accessibility/
+     https://laludztee.github.io/Restaurant-Review-App/
+     https://github.com/Laludztee/Restaurant-Review-App/blob/master/js/main.js
+-->
