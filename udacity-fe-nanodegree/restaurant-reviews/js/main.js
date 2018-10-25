@@ -5,11 +5,18 @@ var newMap
 var markers = []
 
 // Register ServiceWorker Script
-if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/restaurant-reviews/worker.js')
-        .catch(function(err) {
-            console.log(err);
-        });
+if ('serviceWorker' in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register('/udacity-fe-nanodegree/restaurant-reviews/sworker.js')
+            .then((res) => {
+                console.log(res);
+                console.log("Registration successful");
+            })
+            .catch((err) => {
+                console.log(err);
+                console.log("Registration not successful");
+            })
+    });
 }
 
 /**
