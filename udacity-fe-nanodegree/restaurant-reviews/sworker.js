@@ -1,6 +1,6 @@
 const cacheThese = [
     './udacity-fe-nanodegree/restaurant-reviews/index.html',
-    './udacity-fe-nanodegree/restaurant-reviews/restaurant.html',
+    // './udacity-fe-nanodegree/restaurant-reviews/restaurant.html',
     // './udacity-fe-nanodegree/restaurant-reviews/css/styles.css',
     // './udacity-fe-nanodegree/restaurant-reviews/data/restaurants.json',
     // './udacity-fe-nanodegree/restaurant-reviews/img/1.jpg',
