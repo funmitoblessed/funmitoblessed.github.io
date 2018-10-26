@@ -1,7 +1,7 @@
 const cacheThese = [
     'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
     'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css'
-    '/udacity-fe-nanodegree/restaurant-reviews/index.html',
+    '/udacity-fe-nanodegree/restaurant-reviews/index.html'
     // './udacity-fe-nanodegree/restaurant-reviews/restaurant.html',
     // './udacity-fe-nanodegree/restaurant-reviews/css/styles.css',
     // './udacity-fe-nanodegree/restaurant-reviews/data/restaurants.json',
