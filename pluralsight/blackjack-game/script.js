@@ -2,7 +2,6 @@
 // Blackjack Game
 // by Funmito Blessed (Pluralsight Javascript course)
 
-
 // Card Variables
 let suites = ['Hearts', 'Clubs', 'Diamonds', 'Spades'],
     values = ['Ace', 'King', 'Queen', 'Jack',
@@ -17,28 +16,26 @@ let hitButton = document.getElementById('hit-button');
 let stayButton = document.getElementById('stay-button');
 
 // Game Variables
-let gameStarted = false,
-    gameOver = false,
+let gameStarted = false;
+let gameOver = false,
     playerWon = false,
     dealerCards = [],
     playerCards = [],
     dealerScore = 0,
-    playerScore = 0,
-    deck = [],
-    card = {};
-
+    playerScore = 0;
+let deck = [];
+// let card = {};
 
 hitButton.style.display = 'none';
 stayButton.style.display = 'none';
 showStatus();
 
-
 newGameButton.addEventListener('click', function() {
-    gameStarted = false;
+    gameStarted = true;
     gameOver = false;
     playerWon = false;
 
-    createDeck();
+    deck = createDeck();
     shuffleDeck(deck);
     dealerCards = [getNextCard(), getNextCard()];
     playerCards = [getNextCard(), getNextCard()];
@@ -48,24 +45,22 @@ newGameButton.addEventListener('click', function() {
     hitButton.style.display = 'inline';
     stayButton.style.display = 'inline';
     showStatus();
+    newFunction();
 });
-
 
 function createDeck() {
     let deck = [];
     for (let suiteIdx = 0; suiteIdx < suites.length; suiteIdx++) {
         for (let valueIdx = 0; valueIdx < values.length; valueIdx++) {
-            card = {
+            let card = {
                 suite: suites[suiteIdx],
                 value: values[valueIdx]
             };
             deck.push(card);
-        }
+        };
     }
     return deck;
 }
-
-console.log(card);
 
 function shuffleDeck(deck) {
     for (let i = 0; i < deck.length; i++) {
@@ -80,11 +75,9 @@ function getCardString(card) {
     return card.value + ' of ' + card.suite;
 }
 
-
 function getNextCard() {
     return deck.shift();
 }
-
 
 function showStatus() {
     if (!gameStarted) {
@@ -92,18 +85,16 @@ function showStatus() {
         return;
     }
 
-    for (var i = o; i < deck.length; i++) {
+    for (var i = 0; i < deck.length; i++) {
+        console.log(getCardString(deck[i]));
         textArea.innerText += '\n' + getCardString(deck[i]);
     }
+
 }
 
-
-
-
-
-
-console.log("Welcome to Blackjack!");
-
-console.log("You are dealt: ");
-console.log(" " + getCardString(playerCards[0]));
-console.log(" " + getCardString(playerCards[1]));
+function newFunction() {
+    console.log("Welcome to Blackjack!");
+    console.log("You are dealt: ");
+    console.log(" " + getCardString(deck[0]));
+    console.log(" " + getCardString(deck[10]));
+};
