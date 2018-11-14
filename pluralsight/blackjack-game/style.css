@@ -1,7 +1,19 @@
 /* Styles go here */
 
 body {
-    width: 40%;
-    margin: auto;
+    width: 90%;
     background: wheat;
+    margin-top: 10%;
+}
+
+.container {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+button {
+    background: teal;
+    color: yellow;
+    border: 2px solid black;
 }
