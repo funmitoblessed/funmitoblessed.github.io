@@ -73,7 +73,9 @@ ul.nav {
 
 .feature-one,
 .feature-two,
-.feature-three {
+.feature-three,
+.feature-four,
+.feature-five {
     margin: 15px;
     text-align: center;
 }
@@ -189,15 +191,11 @@ a:visited {
     .feature-separator {
         display: inherit;
     }
-    .feature-one {
-        width: inherit;
-        margin: auto;
-    }
-    .feature-two {
-        width: inherit;
-        margin: auto;
-    }
-    .feature-three {
+    .feature-one,
+    .feature-two,
+    .feature-three,
+    .feature-four,
+    .feature-five {
         width: inherit;
         margin: auto;
     }
@@ -260,6 +258,14 @@ a:visited {
         margin: auto;
     }
     .feature-three {
+        width: 30%;
+        margin: auto;
+    }
+    .feature-four {
+        width: 30%;
+        margin: auto;
+    }
+    .feature-five {
         width: 30%;
         margin: auto;
     }
