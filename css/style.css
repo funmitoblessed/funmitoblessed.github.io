@@ -100,7 +100,10 @@ ul.nav {
     color: #7d97ad;
 }
 
-.feature-separator {
+.feature-separator-one,
+.feature-separator-two,
+.feature-separator-three,
+.feature-separator-four {
     width: 80%;
     border: .5px solid #7d97ad;
 }
@@ -191,11 +194,14 @@ a:visited {
         display: flex;
         flex-wrap: wrap;
     }
-    .feature-separator {
+    .feature-separator-one,
+    .feature-separator-two,
+    .feature-separator-three,
+    .feature-separator-four {
         display: inherit;
     }
     .featured-separator {
-        width: 40%;
+        width: 60%;
     }
     .feature-one,
     .feature-two,
@@ -246,24 +252,27 @@ a:visited {
         width: 90%;
         margin: auto;
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
     .featured-separator {
-        width: 70%;
+        width: inherit;
         margin-top: 2px;
         border: .5px solid #7d97ad;
     }
-    .feature-separator {
+    .feature-separator-one,
+    .feature-separator-three {
         display: none;
     }
     .feature-one,
-    .feature-two,
+    .feature-two {
+        width: 50%;
+        margin: 2% auto 2%;
+    }
     .feature-three,
     .feature-four,
     .feature-five {
-        width: 40%;
-        margin: 2% auto 0%;
-        display: inline-block;
+        width: 50%;
+        margin: 3% auto 2%;
     }
 }
 
