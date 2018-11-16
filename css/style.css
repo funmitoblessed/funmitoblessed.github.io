@@ -101,7 +101,7 @@ ul.nav {
 }
 
 .feature-separator {
-    width: 90%;
+    width: 80%;
     border: .5px solid #7d97ad;
 }
 
@@ -153,6 +153,9 @@ a:visited {
         border: 1px solid #7d97ad;
         width: 90%;
     }
+    .featured-separator {
+        width: 50%;
+    }
 }
 
 
@@ -191,13 +194,17 @@ a:visited {
     .feature-separator {
         display: inherit;
     }
+    .featured-separator {
+        width: 40%;
+    }
     .feature-one,
     .feature-two,
     .feature-three,
     .feature-four,
     .feature-five {
-        width: inherit;
+        width: 90%;
         margin: auto;
+        /* display: inline-block; */
     }
 }
 
@@ -242,32 +249,21 @@ a:visited {
         flex-wrap: nowrap;
     }
     .featured-separator {
-        max-width: 90%;
+        width: 70%;
         margin-top: 2px;
         border: .5px solid #7d97ad;
     }
     .feature-separator {
         display: none;
     }
-    .feature-one {
-        width: 30%;
-        margin: auto;
-    }
-    .feature-two {
-        width: 30%;
-        margin: auto;
-    }
-    .feature-three {
-        width: 30%;
-        margin: auto;
-    }
-    .feature-four {
-        width: 30%;
-        margin: auto;
-    }
+    .feature-one,
+    .feature-two,
+    .feature-three,
+    .feature-four,
     .feature-five {
-        width: 30%;
-        margin: auto;
+        width: 40%;
+        margin: 2% auto 0%;
+        display: inline-block;
     }
 }
 
