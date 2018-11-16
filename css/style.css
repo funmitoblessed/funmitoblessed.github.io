@@ -104,7 +104,7 @@ ul.nav {
 .feature-separator-two,
 .feature-separator-three,
 .feature-separator-four {
-    width: 80%;
+    width: inherit;
     border: .5px solid #7d97ad;
 }
 
@@ -284,7 +284,59 @@ a:visited {
  */
 
 @media screen and (min-width: 950px) {
-    /* TODO */
-    /* Add style for extra large screens */
-    /* Possibly have up to 5 work per line */
+    .my-details {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .describe {
+        width: 60%;
+        margin: auto;
+    }
+    .my-image {
+        width: 30%;
+        margin: 3% auto;
+    }
+    .summary {
+        width: 90%;
+        margin: auto;
+        order: 1;
+    }
+    .title-separator-one {
+        display: none;
+    }
+    .title-separator-two {
+        color: #fff;
+        margin: 20px auto;
+        border: 1px solid #7d97ad;
+        width: 90%;
+    }
+    .featured-work {
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .featured-separator {
+        width: inherit;
+        margin-top: 2px;
+        border: .5px solid #7d97ad;
+    }
+    .feature-separator-two,
+    .feature-separator-four {
+        display: none;
+    }
+    .feature-separator-three {
+        display: inherit;
+    }
+    .feature-one,
+    .feature-two,
+    .feature-three {
+        width: 30%;
+        margin: 2% auto 2%;
+    }
+    .feature-four,
+    .feature-five {
+        width: 40%;
+        margin: 2% auto 2%;
+    }
 }
