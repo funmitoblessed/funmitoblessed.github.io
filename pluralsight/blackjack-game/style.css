@@ -12,6 +12,15 @@ body {
     margin: auto;
 }
 
+#text-area {
+    background-color: aqua;
+    border-radius: 10%;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto 5%;
+    padding: 5% 0 3%;
+}
+
 button {
     background: teal;
     color: yellow;
