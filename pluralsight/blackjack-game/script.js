@@ -22,9 +22,9 @@ let gameOver = false,
     dealerCards = [],
     playerCards = [],
     dealerScore = 0,
-    playerScore = 0;
-let deck = [];
-// let card = {};
+    playerScore = 0,
+    deck = [],
+    card = {};
 
 hitButton.style.display = 'none';
 stayButton.style.display = 'none';
@@ -70,6 +70,7 @@ function createDeck() {
             deck.push(card);
         };
     }
+    console.log(deck);
     return deck;
 }
 
