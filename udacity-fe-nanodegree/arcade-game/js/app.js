@@ -46,7 +46,7 @@ Enemy.prototype.render = function() {
 // a handleInput() method.
 let Player = function(x, y) {
     // image sprite for player
-    this.sprite = 'images/char-pink-girl.png';
+    this.sprite = 'images/char-princess-girl.png';
 
     // player position
     this.x = x;
@@ -143,15 +143,16 @@ document.addEventListener('keyup', function(e) {
         38: 'up', // ↑
         39: 'right', // →
         40: 'down', // ↓
+        65: 'left', // A
+        68: 'right', // D
+        83: 'down', // S
+        87: 'up', // W
+        // Character selection
         49: 'boy', // 1
         50: 'cat-girl', // 2
         51: 'horn-girl', // 3
         52: 'pink-girl', // 4
-        53: 'princess', // 5
-        65: 'left', // A
-        68: 'right', // D
-        83: 'down', // S
-        87: 'up' // W
+        53: 'princess-girl' // 5
     };
 
     player.handleInput(allowedKeys[e.which]);
