@@ -139,10 +139,19 @@ gameTimer();
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
     let allowedKeys = {
-        37: 'left',
-        38: 'up',
-        39: 'right',
-        40: 'down'
+        37: 'left', // ←
+        38: 'up', // ↑
+        39: 'right', // →
+        40: 'down', // ↓
+        49: 'boy', // 1
+        50: 'cat-girl', // 2
+        51: 'horn-girl', // 3
+        52: 'pink-girl', // 4
+        53: 'princess', // 5
+        65: 'left', // A
+        68: 'right', // D
+        83: 'down', // S
+        87: 'up' // W
     };
 
     player.handleInput(allowedKeys[e.which]);
@@ -182,7 +191,6 @@ function gameTimer() {
             gameScore = 0;
             scoreHolder.innerHTML = gameScore;
             gameTimer();
-            console.log('Time Up!');
         }
     }, 1000);
 
@@ -198,6 +206,3 @@ function addZero(i) {
     if (i < 10) { i = "0" + i };
     return i;
 };
-
-
-console.log(allEnemies[0], allEnemies[1], allEnemies[2], allEnemies[3], player);
