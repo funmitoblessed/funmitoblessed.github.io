@@ -29,24 +29,6 @@ let allEnemies = [new Enemy(randOne, 230, randThree),
 let player = new Player();
 
 
-
-// resets player position on collision and reduces game score
-function resetPlayer() {
-    player.x = 200;
-    player.y = 410;
-    if (gameScore <= 0) {
-        gameScore = 0;
-    } else {
-        gameScore--;
-    }
-    scoreHolder.innerHTML = gameScore;
-};
-
-
-
-
-gameTimer();
-
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
@@ -67,11 +49,32 @@ document.addEventListener('keyup', function(e) {
         53: 'princess-girl' // 5
     };
 
+    // if (menu.on) {
+    //     menu.handleInput(allowedKeys[e.keyCode]);
+    // } else {
+    //     player.handleInput(allowedKeys[e.keyCode]);
+    //     player.score(allowedKeys[e.keyCode]);
+    // }
 
     player.handleInput(allowedKeys[e.which]);
     player.score(allowedKeys[e.which]);
 });
 
+
+// resets player position on collision and reduces game score
+function resetPlayer() {
+    player.x = 200;
+    player.y = 410;
+    if (gameScore <= 0) {
+        gameScore = 0;
+    } else {
+        gameScore--;
+    }
+    scoreHolder.innerHTML = gameScore;
+};
+
+
+gameTimer();
 
 // timer function
 function gameTimer() {
@@ -107,12 +110,6 @@ function gameTimer() {
             gameTimer();
         }
     }, 1000);
-
-    // function endGame() {
-
-    // };
-
-    // endGame();
 };
 
 // add zero in front of numbers < 10
