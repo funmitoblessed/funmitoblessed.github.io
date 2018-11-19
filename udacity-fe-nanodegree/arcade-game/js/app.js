@@ -27,6 +27,8 @@ let allEnemies = [new Enemy(randOne, 230, randThree),
 // Place the player object in a variable called player
 
 let player = new Player();
+gameTimer();
+
 
 
 // This listens for key presses and sends the keys to your
@@ -57,7 +59,6 @@ document.addEventListener('keyup', function(e) {
     }
 
 });
-gameTimer();
 
 
 
@@ -72,7 +73,6 @@ function resetPlayer() {
     }
     scoreHolder.innerHTML = gameScore;
 };
-
 
 
 // timer function
