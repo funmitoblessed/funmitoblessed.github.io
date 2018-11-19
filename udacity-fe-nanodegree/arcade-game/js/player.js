@@ -8,7 +8,6 @@ let Player = function(x, y) {
     // player position
     this.x = 200;
     this.y = 410;
-
 };
 
 // update method for the Player class

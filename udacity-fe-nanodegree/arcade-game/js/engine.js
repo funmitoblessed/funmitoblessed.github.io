@@ -47,6 +47,16 @@ var Engine = (function(global) {
         update(dt);
         render();
 
+        /* Checks to see if the menu is on, if so, let the user select which
+         * sprite they want to use. If the menu if off, then set the player's
+         * sprite before the next render.
+         */
+        if (menu.on) {
+            menu.render();
+        } else {
+            menu.setSprite(player);
+        }
+
         /* Set our lastTime variable which is used to determine the time delta
          * for the next time this function is called.
          */

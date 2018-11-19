@@ -26,7 +26,7 @@ Menu.prototype = {
     render: function() {
         // render menu background
         ctx.globalAlpha = 0.6;
-        ctx.fillStyle = 'black';
+        ctx.fillStyle = 'blue';
         ctx.lineJoin = "round";
         ctx.lineWidth = this.cornerRadius;
         ctx.fillRect(this.rectX + (this.cornerRadius / 2), this.rectY + (this.cornerRadius / 2), this.rectWidth - this.cornerRadius, this.rectHeight - this.cornerRadius);

@@ -1,5 +1,5 @@
 // get user name
-// let user = prompt("Before we begin, please tell me your name");
+let user = prompt("Before we begin, please tell me your name");
 
 // variable to hold game score during play
 let scoreHolder = document.getElementById('score');
@@ -49,16 +49,16 @@ document.addEventListener('keyup', function(e) {
         53: 'princess-girl' // 5
     };
 
-    // if (menu.on) {
-    //     menu.handleInput(allowedKeys[e.keyCode]);
-    // } else {
-    //     player.handleInput(allowedKeys[e.keyCode]);
-    //     player.score(allowedKeys[e.keyCode]);
-    // }
+    if (menu.on) {
+        menu.handleInput(allowedKeys[e.keyCode]);
+    } else {
+        player.handleInput(allowedKeys[e.keyCode]);
+        player.score(allowedKeys[e.keyCode]);
+    }
 
-    player.handleInput(allowedKeys[e.which]);
-    player.score(allowedKeys[e.which]);
 });
+gameTimer();
+
 
 
 // resets player position on collision and reduces game score
@@ -74,7 +74,6 @@ function resetPlayer() {
 };
 
 
-gameTimer();
 
 // timer function
 function gameTimer() {
@@ -98,7 +97,7 @@ function gameTimer() {
         }
         s = addZero(s);
         timer.innerHTML = h + ":" + m + ":" + s;
-        if (m == 01 && s == 00) {
+        if (m == 01 && s == 30) {
             alert(`Congratulations ${user}! You won this game with ${gameScore} points! Press OK to restart the game`);
             clearInterval(t);
             timer.innerHTML = '0:00:00';
