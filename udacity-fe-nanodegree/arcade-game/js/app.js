@@ -1,9 +1,14 @@
 // get user name
-let user = prompt("Before we begin, please tell me your name");
+// let user = prompt("Before we begin, please tell me your name");
 
 // variable to hold game score during play
 let scoreHolder = document.getElementById('score');
 let gameScore = scoreHolder.innerHTML = 0;
+
+// initialize menu
+// let menu = new Menu();
+
+// menu.render();
 
 // Enemies our player must avoid
 let Enemy = function(x, y, speed) {
@@ -154,6 +159,7 @@ document.addEventListener('keyup', function(e) {
         52: 'pink-girl', // 4
         53: 'princess-girl' // 5
     };
+
 
     player.handleInput(allowedKeys[e.which]);
     player.score(allowedKeys[e.which]);
