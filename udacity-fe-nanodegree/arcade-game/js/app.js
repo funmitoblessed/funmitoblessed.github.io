@@ -73,7 +73,7 @@ function resetPlayer() {
 
 
 // timer function
-function gameTimer() {
+(function gameTimer() {
     let h = 0;
     let m = 0;
     let s = 0;
@@ -106,7 +106,7 @@ function gameTimer() {
             gameTimer();
         }
     }, 1000);
-};
+})();
 
 // add zero in front of numbers < 10
 function addZero(i) {
