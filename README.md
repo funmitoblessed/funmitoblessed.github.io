@@ -32,3 +32,8 @@ One stop for all my front-end web development projects
 [Simple Score Keeper App](https://ofunmito.github.io/web-dev-bootcamp/score-keeper-app)
 
 [Color Game](https://ofunmito.github.io/web-dev-bootcamp/color-game)
+
+
+## Pluralsight JavaScript Fundamentals
+
+[Blackjack Game](https://ofunmito.github.io/pluralsight/blackjack-game)
