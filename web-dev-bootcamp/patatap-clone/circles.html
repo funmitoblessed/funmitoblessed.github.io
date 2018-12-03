@@ -11,21 +11,21 @@
     <link rel="stylesheet" type="text/css" href="css/circles.css">
 
     <!-- Define inlined PaperScript associate it with myCanvas !!!NOT WORKING -->
-    <!-- <script type="text/paperscript" canvas="myCanvas">
+    <script type="text/paperscript" canvas="myCanvas">
         // Create a Paper.js Path to draw a line into it:
         let path = new Path();
         // Give the stroke a color
-        path.strokeColor = 'black';
+        path.strokeColor = 'red';
         let start = new Point(100, 100);
         // Move to start and draw a line from there
         path.moveTo(start);
         // Note the plus operator on Point objects.
         // PaperScript does that for us, and much more!
         path.lineTo(start + [100, -50]);
-    </script> -->
+    </script>
 
     <!-- Working with JavaScript directly -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
         // Only executed our code once the DOM is ready.
         window.onload = function() {
             // Get a reference to the canvas object
@@ -42,19 +42,16 @@
             // Note that the plus operator on Point objects does not work
             // in JavaScript. Instead, we need to call the add() function:
             path.lineTo(start.add([100, -50]));
-
-            var myCircle = new Path.Circle(new Point(100, 70), 30);
-            myCircle.fillColor = 'black';
-
             // Draw the view now:
             paper.view.draw();
         }
-    </script>
+    </script> -->
 
 </head>
 
 <body>
     <canvas id="myCanvas" resize></canvas>
+
 </body>
 
 </html>
