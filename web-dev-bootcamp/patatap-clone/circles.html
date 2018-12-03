@@ -6,11 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Circles</title>
+    <!-- Load the paper.js library -->
     <script type="text/javascript" src="js/paper-full.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/circles.css">
+
+    <!-- Define inlined PaperScript associate it with myCanvas !!!NOT WORKING -->
+    <!-- <script type="text/paperscript" canvas="myCanvas">
+        // Create a Paper.js Path to draw a line into it:
+        let path = new Path();
+        // Give the stroke a color
+        path.strokeColor = 'black';
+        let start = new Point(100, 100);
+        // Move to start and draw a line from there
+        path.moveTo(start);
+        // Note the plus operator on Point objects.
+        // PaperScript does that for us, and much more!
+        path.lineTo(start + [100, -50]);
+    </script> -->
+
+    <!-- Working with JavaScript directly -->
+    <script type="text/javascript">
+        // Only executed our code once the DOM is ready.
+        window.onload = function() {
+            // Get a reference to the canvas object
+            let canvas = document.getElementById('myCanvas');
+            // Create an empty project and a view for the canvas:
+            paper.setup(canvas);
+            // Create a Paper.js Path to draw a line into it:
+            let path = new paper.Path();
+            // Give the stroke a color
+            path.strokeColor = 'red';
+            let start = new paper.Point(100, 100);
+            // Move to start and draw a line from there
+            path.moveTo(start);
+            // Note that the plus operator on Point objects does not work
+            // in JavaScript. Instead, we need to call the add() function:
+            path.lineTo(start.add([100, -50]));
+
+            var myCircle = new Path.Circle(new Point(100, 70), 30);
+            myCircle.fillColor = 'black';
+
+            // Draw the view now:
+            paper.view.draw();
+        }
+    </script>
+
 </head>
 
 <body>
-
+    <canvas id="myCanvas" resize></canvas>
 </body>
 
 </html>
