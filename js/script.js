@@ -1,3 +1,5 @@
+/*jshint  esversion: 6 */
+
 // copyright year
 let newDate = new Date();
 let dateString = "";
