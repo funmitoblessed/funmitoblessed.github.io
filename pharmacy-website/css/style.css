@@ -1,0 +1,18 @@
+/* CSS Files */
+
+/*
+ *
+ * FOOTER
+ *
+ */
+
+ .credit {
+    text-align: center;
+    width: auto;
+    padding: 2% 0;
+}
+
+a:hover,
+a:visited {
+    text-decoration: none;
+}
