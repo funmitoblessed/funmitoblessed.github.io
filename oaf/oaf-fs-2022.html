@@ -1,0 +1,28 @@
+<html>
+
+<!-- Google Form Links -->
+<!-- links[0]="https://forms.gle/11EZV97yxWikaW278" or "https://bit.ly/oaf-fs-22-batch-a" (Batch A) -->
+<!-- links[1]="https://forms.gle/2vR1QqFGv4y2rj7h6" or "https://bit.ly/oaf-fs-22-batch-b" (Batch B) -->
+<!-- links[2]="https://forms.gle/9gGBrT2XDofUYms19" or "https://bit.ly/oaf-fs-22-batch-c" (Batch C) -->
+
+<!-- Jivrus Presenter Links -->
+<!-- links[0]="https://presenter.jivrus.com/p/1qMi7tTdW6uW15C4rxdAa6KLzZzS-I9eJadsEqFXKVTo" -->
+<!-- links[1]="https://presenter.jivrus.com/p/1nlohDsdjN5CfYCFQm2pcn5MLu2eswQl39kF6VuCiwqE" -->
+<!-- links[2]="https://presenter.jivrus.com/p/1xOREzhsmRM9JJK2Q_iW4L4nnj6Je1PWn364duMbAS_M" -->
+
+<script type="text/javascript">
+function randomlinks(){
+    var myrandom=Math.round(Math.random()*3)
+    var links=new Array()
+    links[0]="https://bit.ly/oaf-fs-22-batch-a"
+    links[1]="https://bit.ly/oaf-fs-22-batch-b"
+    links[2]="https://bit.ly/oaf-fs-22-batch-c"
+ 
+    window.location=links[myrandom]
+}
+</script>
+<form>
+<input type="button" value="Click here to proceed" onClick="randomlinks()">
+</form>
+
+<html/>
