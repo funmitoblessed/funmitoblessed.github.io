@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <!-- Adire eleko-inspired tile: resist lines drawn in white over an indigo field supplied by CSS -->
+  <g fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="2" stroke-linecap="round">
+    <path d="M1 1h158v158H1zM80 1v158M1 80h158" stroke-opacity=".32"/>
+    <circle cx="40" cy="40" r="26"/>
+    <circle cx="40" cy="40" r="16"/>
+    <path d="M95 19h50M95 30h50M95 41h50M95 52h50M95 63h50"/>
+    <path d="M94 104l11-10 11 10 11-10 11 10 11-10M94 122l11-10 11 10 11-10 11 10 11-10M94 140l11-10 11 10 11-10 11 10 11-10"/>
+  </g>
+  <g fill="#fff" fill-opacity=".5">
+    <circle cx="40" cy="40" r="5"/>
+    <circle cx="22" cy="102" r="3.5"/><circle cx="40" cy="102" r="3.5"/><circle cx="58" cy="102" r="3.5"/>
+    <circle cx="22" cy="120" r="3.5"/><circle cx="40" cy="120" r="5"/><circle cx="58" cy="120" r="3.5"/>
+    <circle cx="22" cy="138" r="3.5"/><circle cx="40" cy="138" r="3.5"/><circle cx="58" cy="138" r="3.5"/>
+  </g>
+</svg>
